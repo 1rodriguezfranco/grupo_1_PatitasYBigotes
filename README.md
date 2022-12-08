@@ -1,10 +1,20 @@
-<span><h2>Temática del sitio:</h2></span> <span><h3>Venta de alimentos y artículos para mascotas.</h3></span>
+<h1>Patitas y Bigotes</h1>
 
-<span><h2>Público objetivo:</h2></span> <span><h3>Personas con capacidad de compra, mayores de 18 años, con mascota/s.</h3></span>
+<h2>Temática del sitio:</h2> 
+<span>Venta de alimentos y artículos para mascotas.</span>
 
-<h1>Sitios de referencia:</h1>
-<h3>https://cordoba.pluspet.com.ar/</h3>
-<h3>https://www.catycan.com.ar/</h3>
-<h3>https://www.puppis.com.ar/</h3>
-<h3>https://www.petsmart.com/</h3>
-<h3>https://www.kympetshop.com.ar/</h3>
+<h2>Público objetivo:</h2>
+<ul>
+    <li>Personas con capacidad de compra.</li>
+    <li>Personas mayores de 18 años.</li>
+    <li>Personas con mascota/s.</li>
+</ul>
+
+<h2>Sitios de referencia:</h2>
+<ul>
+    <li>https://cordoba.pluspet.com.ar/</li>
+    <li>https://www.catycan.com.ar/</li>
+    <li>https://www.puppis.com.ar/</li>
+    <li>https://www.petsmart.com/</li>
+    <li>https://www.kympetshop.com.ar/</li>
+</ul>
