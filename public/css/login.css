@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Mouse Memoirs', sans-serif;
+    background-color: white;
+}
+
+
+
+
+
+
+/* LOGIN */
+body {
+    background-color: whitesmoke;
+}
+.main-section{
+    width: 100%;
+    margin-top: 90px;
+    background-color: whitesmoke;
+}
+.main-title h2 {
+    font-size: 4vw;
+    letter-spacing: 1.2px;
+    margin-bottom: 20px;
+}
+.main-title, .subtitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    line-height: 1px;
+}
+.subtitle {
+    margin-top: 8px;
+    font-size: 3vw;
+    color: rgb(31, 97, 141 );
+    letter-spacing: 2.5px;
+}
+.main-title i {
+    padding: 0px 8px;
+    color: rgb(255, 195, 0);
+    opacity: 90%;
+}
+.email, .password { 
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    letter-spacing: 0.5px;
+    font-size: 4vw;
+    margin: 8px;
+}
+.email input, .password input {
+    border-radius: 5px;
+}
+.passwordbutton {
+    letter-spacing: 0.4px;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    font-size: 3vw;
+}
+.passwordbutton button  {
+    border-radius: 5px;
+}
+.recorder {
+    display: flex;
+    margin-bottom: 11px;
+    font-size: 3vw;
+    position: relative;
+    right: 5.5vw;
+}
+.recorder input, .recorder label {
+    padding: 0px 3px;
+}
+.create-count, .recover, .forgot, .enter-buttom, .recorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.7px;
+    font-size: 2.9vw;
+}
+.create-count p, .create-count a {
+    padding: 0px 4px;
+    height: 0px;
+}
+.create-count a {
+    color: rgb(31, 97, 141 );
+    text-decoration: none;
+}
+.enter-buttom {
+    font-size: 4.5vw;
+}
+.enter-buttom button {
+    background-color: rgb(255, 195, 0);
+    opacity: 90%;
+    font-size: 3.2vw;
+    border-radius: 5px;
+}
+.forgot {
+    height: 40px;
+}
+.recover a {
+    color: rgb(31, 97, 141 );
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+/* New Password */ 
+.header-new-password {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+}
+.logo-new-password img{
+    width: 85px;
+    display: flex;
+    justify-content: center;
+}
+.main-password {
+    margin-top: 90px;
+    background-color: whitesmoke;
+}
+.fa-lock, h2, .new-password, .confirm-password, .button-change{ 
+    display: flex;
+    justify-content: center;
+}
+h2 {
+    font-size: 4vw;
+    letter-spacing: 1.2px;
+    margin: 11px;
+}
+.fa-lock{
+    font-size: 3.7vw;
+    color: rgb(255, 195, 0);
+    opacity: 90%;
+}
+.new-password, .confirm-password {
+    flex-wrap: wrap;
+    align-content: center;
+    letter-spacing: 0.5px;
+    font-size: 3.5vw;
+    margin: 12px;
+}
+.new-password input, .confirm-password input {
+    border-radius: 5px;
+}
+.button-change {
+    margin: 13px 0px;
+    font-size: 3vw;
+}
+.button-change button{
+    background-color: #69d177;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+}
+.button-change a {
+    text-decoration: none;
+}
+.body-new-password {
+    background-color: whitesmoke;
+}
+
+
+
+
+
+
+
+/* Recover Password */
+.body-recover {
+    background-color: whitesmoke;
+}
+.top-main-recover{
+    margin-top: 90px;
+}
+.main-form-recover, .title-recover, .subtitle-recover {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.main-form-recover input {
+    border-radius: 5px;
+}
+.title-recover {
+    letter-spacing: 2.5px;
+}
+.title-recover h2{
+    font-size: 4vw;
+}
+.subtitle-recover {
+    font-size: 3.5vw;
+    letter-spacing: 1.2px;
+    margin: 11px 0px;
+    color: rgb(31, 97, 141 );
+}
+.new-sesion-button a, .recover-button a{
+    text-decoration: none;   
+}
+.new-sesion-button {
+    margin-bottom: 12px;
+}
+.main-form-recover {
+    font-size: 3.5vw;
+}
+.recover-button, .new-sesion-button {
+    font-size: 3.5vw;
+}
+.recover-button button {
+    background-color: #69d177;
+    border-radius: 5px;
+}
+.new-sesion-button button {
+    background-color: rgb(255, 195, 0);
+    opacity: 90%;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+@media (min-width: 769px){
+    .main-title h2, .email, .password{
+        font-size: 30px;
+    }
+    .subtitle{
+        font-size: 23px;
+    } 
+    .passwordbutton { 
+      font-size: 20px;
+    }
+    .recorder {
+        font-size: 25px;
+    }
+    .create-count, .recover, .forgot, .recorder {
+        font-size: 22px;
+    }
+    .create-count {
+        margin-bottom: 11px;
+    }
+    .main-password h2 {
+        font-size: 30px;
+    }
+    .new-password, .confirm-password{
+        font-size: 28px;
+    }
+   .fa-lock {
+    font-size: 30px;
+   }
+   .button-change {
+    font-size: 26px;
+   }
+}

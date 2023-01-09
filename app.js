@@ -19,3 +19,7 @@ app.get("/carrito", (req, res) => {
 app.get('/productdetails', (req,res)=>{
     res.sendFile(__dirname + '/views/productdetails.html');
 });
+
+app.get("/login", (req, res) => {res.sendFile(path.join(__dirname,"./views/login.html"))});
+app.get("/recoverpassword", (req, res) => {res.sendFile(path.join(__dirname,"./views/recoverpassword.html"))});
+app.get("/newpassword", (req, res) => {res.sendFile(path.join(__dirname,"./views/newpassword.html"))});
