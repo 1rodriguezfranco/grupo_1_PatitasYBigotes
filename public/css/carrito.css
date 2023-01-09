@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+    color:black;
+    font-family: 'Mouse Memoirs', sans-serif;
+    letter-spacing: 1.5px;
+    
+
+}
+h1{
+    padding: 20px;
+    text-align: center;
+    margin: 30px;
+}
+.contenedor{
+    margin: 80px auto;
+    margin-bottom: 0px;
+    padding: 80px;
+    background-color:rgb(255, 195, 0); 
+
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: whitesmoke;
+}
+
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    
+}
+tr{
+    border: solid 1px black;
+   
+}
+ th{
+    text-align: left;
+    padding: 5px;
+    color:rgb(31, 97, 141 );
+    font-weight: bold;
+}
+ td{
+    
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+td input{
+ width: 50px;
+ height: 30px;
+ padding: 5px;
+}
+td p{
+    font-size: 20px;
+    font-weight: normal;
+    color:rgb(31, 97, 141 );
+}
+
+td a{
+    color:rgb(31, 97, 141 );
+    font-size: 13px;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.total table{
+    width: 100%;
+    max-width: 350px;
+    
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right ;
+}
+.total td{
+    font-weight: bold;
+}
+body{
+    background-color:rgb(255, 195, 0); 
+    opacity: 90%;
+}
+@media (min-width:769){
+
+ .contenedor{
+    width: 963px;
+ }
+   
+}
