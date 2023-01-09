@@ -1,13 +1,4 @@
-*{
-    margin: 0px;
-    padding: 0px;    
-    box-sizing: border-box;
-    color:black;
-    font-family: 'Mouse Memoirs', sans-serif;
-    letter-spacing: 1.5px;
-    
 
-}
 h1{
     padding: 20px;
     text-align: center;
@@ -18,6 +9,7 @@ h1{
     margin-bottom: 0px;
     padding: 80px;
     background-color:rgb(255, 195, 0); 
+    opacity: 90%;
 
 }
 table{
@@ -83,14 +75,8 @@ th:last-child{
 .total td{
     font-weight: bold;
 }
-body{
-    background-color:rgb(255, 195, 0); 
-    opacity: 90%;
-}
-@media (min-width:769){
-
- .contenedor{
-    width: 963px;
- }
-   
-}
+@media (min-width: 460px){
+    .contenedor{
+       margin: 0px;
+   }
+   }
