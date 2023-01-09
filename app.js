@@ -15,3 +15,7 @@ app.get("/", (req, res) => {
 app.get("/carrito", (req, res) => {
     res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
 })
+
+app.get('/productdetails', (req,res)=>{
+    res.sendFile(__dirname + '/views/productdetails.html');
+});
