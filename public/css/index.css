@@ -1,0 +1,190 @@
+main{
+    margin-top: 101.5px;
+}
+
+
+.productosPorImagen{
+    background-color: rgba(255, 195, 0);
+    opacity: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 4px;
+}
+.productosPorImagen h3{
+    font-size: 1.6rem;
+    font-weight: lighter;
+    color: white;
+    padding: 2px 4px;
+}
+.mascotas{
+    width: 100%;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.mascotas div img{
+    width: 23vw;
+    height: 20vw;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: white;
+    border-color:rgb(37, 89, 157);
+    border-style: solid;
+}
+
+
+.marcasDestacadas{
+    padding: 8px 4px;
+}
+.marcasDestacadas h3{
+    font-size: 1.6rem;
+    font-weight: lighter;
+    padding: 2px 4px;
+}
+.marcasDestacadas .marcas{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px 8px;
+    justify-content: center;
+}
+.marcasDestacadas .marca{
+    width: 35%;
+    border:  solid 1px rgba(203, 200, 200, 0.94);
+    display: flex;
+    justify-content: center;
+}
+.marcasDestacadas .marca img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.productosPreferidos{
+    padding: 8px 4px;
+}
+.productosPreferidos h3{
+    font-size: 1.6rem;
+    font-weight: lighter;
+    padding: 2px 4px;
+}
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.producto{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(255, 195, 0, 0.9);
+    border-radius: 5%;
+    justify-content: center;
+    margin: 2px;
+}
+.producto .imagen{
+    width: 100%;
+}
+.producto img{
+    width: 100%;
+    padding: 1px;
+    border-radius: 5%;
+    border-bottom: 1px solid rgb(255, 195, 0, 0.9);
+}
+.producto .nombre{
+    width: 95%;
+    font-size: 1.1rem;
+}
+.producto .descripcion{
+    width: 95%;
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: oblique;
+    padding-left: 2px;
+    color: rgba(117, 113, 113, 0.905);
+}
+.producto .precio{
+    width: 95%;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-align: center;
+}
+.agregarCarrito{
+    width: 125px;
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    background-color: #0071FF;
+    border: solid 1px #0071FF;
+    border-radius: 10%;
+    margin: 2px;
+}
+.producto .compra{
+    width: 40%;
+    text-decoration: none;
+}
+.comprar{
+    width: 65px;
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    background-color: green;
+    border: solid 1px green;
+    border-radius: 10%;
+    margin: 2px;
+}
+
+
+@media (min-width: 460px){
+    main{
+        margin-top: 0;
+    }
+    .mascotas div img{
+        width: 105.8px;
+        height: 95px;
+    }
+    .marcasDestacadas .marca{
+        width: 128.8px;
+        height: 118.9px;
+    }
+    .producto{
+        width: 203.4px;
+        height: 340px;
+    }
+}
+
+
+@media (min-width: 769px){
+    main .productosPorImagen .mascotas div img{
+        width: 125px;
+        height: 110px;
+        transition: all 0.3s;
+    }
+    main .productosPorImagen .mascotas div:hover img{
+        width: 130px;
+        height: 115px;
+        border-color: #9acbf9;
+    }
+    main .marcasDestacadas .marca{
+        width: 140px;
+        height: 130px;
+        transition: all 0.3s;
+    }
+    main .marcasDestacadas .marca:hover{
+        width: 145px;
+        height: 135px;
+        border-color: rgb(255, 195, 0, 0.9);
+    }
+    main .productosPreferidos .productos .producto{
+        transition: all 0.3s;
+    }
+    main .productosPreferidos .productos .producto:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        border-color: rgb(37, 89, 157);
+        width: 213.4px;
+        height: 350px;
+    }
+    main .productosPreferidos .productos .producto:hover img{
+        border-color: rgb(37, 89, 157);
+    }
+}

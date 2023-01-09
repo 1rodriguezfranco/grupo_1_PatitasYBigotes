@@ -18,3 +18,6 @@
     <li>https://www.petsmart.com/</li>
     <li>https://www.kympetshop.com.ar/</li>
 </ul>
+
+<h2>Link del tablero de trabajo</h2>
+<p>https://trello.com/b/qlJf1vsa/sprint-2</p>

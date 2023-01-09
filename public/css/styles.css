@@ -1,0 +1,308 @@
+*{
+    font-family: 'Mouse Memoirs', sans-serif;
+    letter-spacing: 1.5px;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: whitesmoke;
+}
+
+
+header{
+    width: 100%;
+    background-color: #add5fa;
+}
+.fix-header{
+    background-color: #add5fa;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.top-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    padding-bottom: 2px;
+}
+.burger-menu{
+    text-align: left;
+}
+.burger-menu i{
+    background-color: rgb(255, 195, 0);
+    opacity: 90%;
+    border-radius: 10%;
+    color: #add5fa;
+    font-size: 1.5rem;
+    height: 45px;
+    padding: 10px;
+    width: 40px;
+}
+.logo img{
+    width: 75px;
+}
+.login-navbar-tablet{
+    display: none;
+}
+.login-navbar i{
+    font-size: 1.8rem;
+    color: rgb(37, 89, 157);
+}
+.login-navbar-tablet li a{
+        text-decoration: none;
+        color: rgb(37, 89, 157);
+        font-weight: lighter;
+        font-size: 1.1rem;
+}
+.login-navbar-tablet li a i{
+    font-size: 1.2rem;
+    color: rgb(37, 89, 157);
+}
+header ul li{
+    list-style-type: none;
+}
+header .cart i{
+    font-size: 1.8rem;
+    color: rgb(37, 89, 157);
+}
+.center-header{
+    padding-bottom: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.form{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form .input{
+    background-color: #FFF;
+    border: 1px solid rgb(37, 89, 157);
+    outline: none;
+    color: rgb(37, 89, 157);
+    padding: 0vw 0vw 2px 2px;
+    width: 75%;
+    height: 25px;
+    font-size: 1.1rem;
+}
+.form .submit{
+    background-color: #FFF;
+    border: 1px solid rgb(37, 89, 157);
+    color: rgb(37, 89, 157);
+    width: 25px;
+    height: 25px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+header .site-navbar{
+    display: none;
+}
+
+
+footer{
+    padding: 8px 4px;
+    background-color: #add5faab;
+}
+.footer-article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4px;
+}
+.footer-article a{
+    text-decoration: none;
+}
+.footer-article div{
+    width: 51%;
+    border-bottom: solid 1px rgb(255, 195, 0, 0.9);
+}
+.footer-article div p{
+    width: 100%;
+    color: rgb(37, 89, 157);
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 2px;
+}
+.footer-article article p{
+    font-size: 1rem;
+    opacity: 0.6;
+    color: rgb(37, 89, 157);
+}
+.footer-article div article{
+    display: none;
+}
+.footer-article div article .desplegable p{
+    display: none;
+}
+.footer-article .ref-logo{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+.footer-article .ref-logo img{
+    width: 100%;
+}
+footer .redesSociales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 4px 25%
+}
+footer .redesSociales i{
+    color: rgb(255, 195, 0, 0.9);
+    font-size: 1.4rem;
+}
+
+
+
+@media (min-width: 460px){
+    header .top-header .logo{
+        position: relative;
+        top: 5px;
+        right: 70px;
+        padding-bottom: 4px;
+    }
+    header .top-header .login-navbar-tablet li a{
+        position: relative;
+        top: 5px;
+        right: 45px;
+    }
+    .burger-menu i{
+        display: none;
+    }
+    .login-navbar{
+        display: none;
+    }
+    .login-navbar-tablet{
+        display: block;
+    }
+    header .site-navbar{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        padding: 5px 2px;
+        background-color: #9acbf9;
+        margin-top: 101.5px;
+    }
+    header .site-navbar li{
+        font-size: 1rem;
+        color: rgb(37, 89, 157);
+    }
+    header .site-navbar i{
+        font-size: 0.6rem;
+        color: rgb(37, 89, 157);
+    }
+    header .fix-header .center-header .form .input{
+        width: 300px;
+    }
+
+    .footer-article .ref-logo{
+        width: 113px;
+        height: 101.7px;
+    }
+}
+
+@media (min-width: 769px){
+    header .fix-header{
+        height: 80px;
+    }
+    header .top-header .logo{
+        position: relative;
+        top: 5px;
+        right: 175px;
+    }
+    header .top-header .login-navbar-tablet li a{
+        position: relative;
+        top: 10px;
+        left: 100px;
+    }
+    header .top-header .login-navbar-tablet .register a{
+        transition: all 0.3s;
+    }
+    header .top-header .login-navbar-tablet .register:hover a{
+        color: rgb(255, 195, 0, 0.9);
+    }
+    header .top-header .login-navbar-tablet .register a i{
+        transition: all 0.3s;
+    }
+    header .top-header .login-navbar-tablet .register:hover a i{
+        color: rgb(255, 195, 0, 0.9);
+    }
+    header .top-header .login-navbar-tablet .login a{
+        transition: all 0.3s;
+    }
+    header .top-header .login-navbar-tablet .login:hover a{
+        color: rgb(255, 195, 0, 0.9);
+    }
+    header .top-header .login-navbar-tablet .login a i{
+        transition: all 0.3s;
+    }
+    header .top-header .login-navbar-tablet .login:hover a i{
+        color: rgb(255, 195, 0, 0.9);
+    }
+    header .top-header .cart{
+        position: relative;
+        top: 10px;
+        left: 50px;
+    }
+    header .top-header .cart:hover i{
+        transition: all 0.3s;
+    }
+    header .top-header .cart:hover i{
+        color: rgb(255, 195, 0, 0.9);
+    }
+    header .fix-header .center-header .form{
+        position: relative;
+        bottom: 40px;
+        right: 80px;
+    }
+    header .site-navbar{
+        margin-top: 80px;
+    }
+    header .site-navbar li{
+        font-size: 1.1em;
+        transition: all 0.3s;
+    }
+    header .site-navbar li:hover{
+        color: rgb(255, 195, 0, 0.9);
+    }
+    header .site-navbar i{
+        font-size: 0.7em;
+        transition: all 0.3s;
+    }
+    header .site-navbar li:hover i{
+        color: rgb(255, 195, 0, 0.9);
+    }
+
+    footer .footer-article div:hover article{
+        display: block;
+    }
+    footer .footer-article .nosotros:hover article p a{
+        color: rgb(37, 89, 157);
+    }
+    footer .footer-article .categorias article:hover article p{
+        display: block;
+    }
+    footer .footer-article .categorias article:hover article p a{
+        color: rgb(255, 195, 0, 0.9);
+    }
+    footer .redesSociales i{
+        transition: all 0.3s;
+    }
+    footer .redesSociales i:hover{
+        color: rgb(37, 89, 157);
+        font-size: 1.8rem;
+    }
+}
