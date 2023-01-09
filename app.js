@@ -31,3 +31,6 @@ app.get("/recoverpassword", (req, res) => {
 app.get("/newpassword", (req, res) => {
     res.sendFile(path.join(__dirname,"./views/newpassword.html"))
 });
+app.get('/register', (req , res) => {
+    res.sendFile(path.resolve(__dirname, './views/registerPatitas.html'))
+})

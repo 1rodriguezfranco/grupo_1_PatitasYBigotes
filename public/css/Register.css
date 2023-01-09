@@ -1,0 +1,172 @@
+*{
+    font-family: 'Mouse Memoirs', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*------------------------------------------------------------------*/
+
+form{
+    margin-top: 107.617px;
+    border-bottom: solid 1px rgb(157, 153, 153);
+}
+
+.contenedor-registro{
+    display: block; 
+    padding: 5px;
+    font-size: 15px;
+    margin-left: 50px; 
+    margin-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.contenedor-mail{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    font-size: 15px;
+    margin: 10px; 
+    
+    
+
+}
+
+.registro{
+    width:70vw;
+    align-items: center;
+    padding: 7px;
+    color: rgb(31, 97, 141 );
+   
+
+}
+input{
+    color:rgb(31, 97, 141 );
+    padding-left: 3px;
+   
+}
+.registro2{
+    width: 60vw;
+    justify-content: center;
+    padding: 10px;
+    align-content: center;
+    color: rgb(31, 97, 141 );
+    
+}
+
+.buttons{
+    justify-content: center;
+    width: 35%;
+
+}
+
+body form div input{
+    width: 80%;
+    
+}
+.envios{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.links{
+   width: 85%;
+   background-color: rgb(31, 97, 141 );
+   color:whitesmoke;
+   align-items: center;
+}
+.links2{
+    width: 85%;
+    background-color:whitesmoke;
+    color: red;
+    align-items: center;
+ }
+
+.buttons2{
+    display: flex;
+    justify-content: center;
+    color:rgb(31, 97, 141 )
+
+}
+button{
+    color:rgb(31, 97, 141 );
+}
+@media (min-width: 460px){
+
+    .contenedor-registro{
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px;
+        font-size: 15px;
+        margin-left: 30px;
+        margin-right: 20px; 
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .contenedor-mail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        font-size: 15px;
+        margin: 10px; 
+    }
+    .registro2{
+        width:30vw;
+        padding: 10px;
+        align-content: center;
+        color: rgb(31, 97, 141 );
+        
+    }
+    .registro{
+        width:38vw;
+        align-items: center;
+        padding: 7px;
+        color:rgb(31, 97, 141 );
+       
+}
+}
+@media (min-width: 769px){
+    
+    .contenedor-registro{
+        display: flex; 
+        justify-content: space-around;
+        padding: 5px;
+        font-size: 15px;
+        margin-left: 90px;
+        margin-right: 80px; 
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .contenedor-mail{
+        display: flex;
+        justify-content: center;  
+        align-items: center;
+        padding: 5px;
+        font-size: 15px;
+        
+        
+    }
+    .registro2{
+        width:100px;
+        padding: 10px;
+        align-content: center;
+        color: rgb(31, 97, 141 );
+        
+    }
+    .registro{
+        width:150px;
+        align-items: center;
+        padding: 7px;
+        color:rgb(31, 97, 141 );
+       
+}
+    form{
+        margin-top: 140px;
+    }
+}
+
