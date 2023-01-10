@@ -79,4 +79,7 @@ th:last-child{
     .contenedor{
        margin: 0px;
    }
-   }
+   header .site-navbar{
+    margin-top: 80px;
+}
+}
