@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <title>Pagina inicio de Secion "Proyecto integrador"</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    
+    <%- include("./partials/header") %>
+
+    <main>
+        <section class="main-section">
+            <div class="main-title">
+               </i><h2>Inicia Sesión</h2>
+            </div>
+
+                <h4 class="subtitle">Ingresa tu e-mail y contraseña!</h4>
+            
+            <form action="..." method="POST">
+                <div>
+                    <p class="email">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    </p>
+                    <p class="password">
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" pattern=".{8,15}" placeholder="Contraseña" alt="strongPass" alt="alphanumeric" required>
+                    </p>
+                    <p class="passwordbutton">
+                        <button id="toggle-password" type="button" aria-label="Muestra la contraseña como texto plano. Advertencia: esto hará que se muestre su contraseña en la pantalla.">Mostrar contraseña</button>
+                    </p>   
+                </div>
+                
+                <div class="recorder"> 
+                    <input type="checkbox" name="recordarme?" value="Recordarme"> 
+                    <label for="recordarme?">Recordarme</label>
+                </div>
+             
+                <div class="enter-buttom">
+                    <button type="submit"><a href="/">Entrar</a><i class="fa-solid fa-paw"></i></button>
+                </div>
+
+                <div class="create-count">
+                    <p>¿Nuevo cliente?</p>
+                    <a href="/auth/register">Crear cuenta</a>
+                </div>
+
+                <div class="forgot">
+                    <p>¿Olvidaste tu contraseña?</p>
+                </div>
+
+                <div class="recover">
+                    <a href="/auth/recoverpassword">Recuperar contraseña...</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <%- include("./partials/footer") %>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/carrito.css">
+
+</head>
+
+<body>
+
+    <%- include("./partials/header") %>
+    
+
+    <div class="contenedor" id="contenedor">
+        <div>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="informacion">
+                            <img src="/img/148052.webp">
+                            <div>
+                                <p>Alimento Old Prince </p>
+
+                                <br>
+                                <a href="">Remover</a>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>$5000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="informacion">
+                            <img src="\img\alimento.webp">
+                            <div>
+                                <p>Alimento Royal Canin</p>
+
+                                <br>
+                                <a href="">Remover</a>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>$3000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="informacion">
+                            <img src="\img\alimento2.png">
+                            <div>
+                                <p>Alimento Pro Plan</p>
+
+                                <br>
+                                <a href="">Remover</a>
+                            </div>
+
+                        </div>
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>$8000</td>
+
+                </tr>
+
+            </table>
+            <div class="total">
+                <table>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td>$15000</td>
+                    </tr>
+                    <tr>
+                        <td>Envio</td>
+                        <td>$1000</td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td>$16000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer") %>
+
+
+</body>
+
+</html>

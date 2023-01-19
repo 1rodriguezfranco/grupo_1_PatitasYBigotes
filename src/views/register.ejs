@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto:ital,wght@0,400;1,100&display=swap'); </style>
+    <script src="https://kit.fontawesome.com/9fc2b02ed9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include("./partials/header") %>  
+
+<form class="formulario" action="/register" method="POST">
+    <div class="contenedor-registro">    
+        <div class="registro">
+            <h4>
+                Datos personales: 
+            </h4><br>
+            <div><input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido"></input></div><br>
+            <div><input type="text" name="domicilio" id="domicilio" placeholder="Domicilio"></input></div> <br>
+            <div><input type="text" name="localidad" id="localidad" placeholder="Localidad"></input></div><br>
+            <div><input type="number" name="telefono" id="telefono" placeholder="Nro. de Telefono"></input></div>
+        </div>
+        <div class="registro">
+            <h4>
+                Datos de tu mascota:
+            </h4><br>
+            <div><input type="text" name="nombre" id="nombre" placeholder="Nombre"></input></div><br>
+            <div><input type="text" name="tipo" id="tipo" placeholder="Tipo (perro, gato, roedor, pez, etc.)"></input></div><br>
+            <div><input type="number" name="edad" id="edad" placeholder="Edad"></input></div><br> 
+            <div><input type="number" name="peso" id="peso" placeholder="peso"></input></div>
+        </div>
+    </div> 
+    
+    <div class="contenedor-mail"> 
+            <div class="registro2"> 
+            <h4 class="buttons2">Registro:</h4><br>
+        <div class="buttons2"><input type="email" name="email" id="email" placeholder="Introduce tu correo electronico"></input></div><br>
+            
+                <div class="buttons2"><button class="links"> Registrate con Facebook </button></div><br>
+                <div class="buttons2"><button class="links2"> Registrate con Gmail </button></div><br>
+            
+                <div class="envios">
+                <button class="buttons" type="submit">   Enviar   </button>
+                <button class="buttons" type="reset">  Resetear  </button>
+                </div>
+             </div>
+        </div>    
+    <div>
+</form>
+
+    <%- include("./partials/footer") %>
+
+<body>
+</html>

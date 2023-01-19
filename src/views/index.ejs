@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patitas y Bigotes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  
+    <%- include("./partials/header") %>
+
+    <main>
+        <section class="productosPorImagen">
+            <h3>Productos para cada mascota</h3>
+            <article class="mascotas">
+                <div class="perro"> 
+                    <a href="#"><img src="images/perro.jpg" alt="Perro"></a>
+                </div>
+
+                <div class="gato"> 
+                    <a href="#"><img src="images/gato.jpg" alt="Gato"></a>
+                </div>
+
+                <div class="roedor"> 
+                    <a href="#"><img src="images/roedor.jpg" alt="Roedor"></a>
+                </div>
+
+                <div class="ave"> 
+                    <a href="#"><img src="images/ave.jpg" alt="Ave"></a>
+                </div>
+            </article>
+        </section>
+
+        <section class="marcasDestacadas">
+            <h3>Marcas destacadas</h3>
+            <article class="marcas">
+                <div class="marca">
+                    <a href="#"><img src="images/marca1.png" alt="marca1"></a>
+                </div>
+                <div class="marca">
+                    <a href="#"><img src="images/marca2.png" alt="marca2"></a>
+                </div>
+                <div class="marca">
+                    <a href="#"><img src="images/marca3.png" alt="marca3"></a>
+                </div>
+                <div class="marca">
+                    <a href="#"><img src="images/marca4.png" alt="marca4"></a>
+                </div>
+                <div class="marca">
+                    <a href="#"><img src="images/marca5.png" alt="marca5"></a>
+                </div>
+                <div class="marca">
+                    <a href="#"><img src="images/marca6.png" alt="marca6"></a>
+                </div>
+            </article>
+        </section>
+
+        <section class="productosPreferidos">
+            <h3>Favoritos para tu mascota</h3>
+            <article class="productos">
+                <div class="producto"> 
+                    <a href="#" class="imagen"><img src="images/alimentoPerro.jpg" alt="alimentoPerro"></a>
+                    <p class="nombre">Balanceado Old Prince 15kg</p>
+                    <p class="descripcion">Alimento para perro adulto</p>
+                    <p class="precio">$ 10.000,00</p>
+                    <div class="agregarCarrito">Agregar al carrito</div>
+                    <a href="#" class="compra"><div class="comprar">Comprar</div></a>
+                </div>
+                <div class="producto"> 
+                    <a href="#" class="imagen"><img src="images/alimentoGato.jpg" alt="alimentoGato"></a>
+                    <p class="nombre">Balanceado Excellent Purina 7.5kg</p>
+                    <p class="descripcion">Alimento para gato adulto</p>
+                    <p class="precio">$ 8.500,00</p>
+                    <div class="agregarCarrito">Agregar al carrito</div>
+                    <a href="#" class="compra"><div class="comprar">Comprar</div></a>
+                </div>
+                <div class="producto"> 
+                    <a href="#" class="imagen"><img src="images/alimentoAve.jpg" alt="alimentoAve"></a>
+                    <p class="nombre">Balanceado Zootec TropMix Pericos</p>
+                    <p class="descripcion">Alimento para pericos 1kg</p>
+                    <p class="precio">$ 2.500,00</p>
+                    <div class="agregarCarrito">Agregar al carrito</div>
+                    <a href="#" class="compra"><div class="comprar">Comprar</div></a>
+                </div>
+                <div class="producto"> 
+                    <a href="#" class="imagen"><img src="images/alimentoRoedor.jpg" alt="alimentoRoedor"></a>
+                    <p class="nombre">Heno Puppis 500g</p>
+                    <p class="descripcion">Alimento para conejos</p>
+                    <p class="precio">$ 3.000,00</p>
+                    <div class="agregarCarrito">Agregar al carrito</div>
+                    <a href="#" class="compra"><div class="comprar">Comprar</div></a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <%- include("./partials/footer") %>
+
+</body>
+</html>
