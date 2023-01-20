@@ -1,4 +1,3 @@
-
 *{
     font-family: 'Mouse Memoirs', sans-serif;
     letter-spacing: 1.5px;
@@ -15,10 +14,10 @@ body{
 
 header{
     width: 100%;
-    background-color: #add5fa;
+    background-color: #8ECAE6;
 }
 .fix-header{
-    background-color: #add5fa;
+    background-color: #8ECAE6;
     width: 100%;
     position: fixed;
     top: 0;
@@ -36,10 +35,10 @@ header{
     text-align: left;
 }
 .burger-menu i{
-    background-color: rgb(255, 195, 0);
+    background-color: rgba(255, 195, 0);
     opacity: 90%;
     border-radius: 10%;
-    color: #add5fa;
+    color: #8ECAE6;
     font-size: 1.5rem;
     height: 45px;
     padding: 10px;
@@ -53,6 +52,9 @@ header{
 }
 .login-navbar i{
     font-size: 1.8rem;
+    color: 023047(37, 89, 157);
+}
+.login-navbar a i{
     color: rgb(37, 89, 157);
 }
 .login-navbar-tablet li a{
@@ -110,12 +112,12 @@ header .site-navbar{
 
 footer{
     padding: 8px 4px;
-    background-color: #add5faab;
+    background-color: #8ECAE6;
 }
 .footer-article{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding-bottom: 4px;
 }
@@ -123,8 +125,8 @@ footer{
     text-decoration: none;
 }
 .footer-article div{
-    width: 51%;
-    border-bottom: solid 1px rgb(255, 195, 0, 0.9);
+    border-bottom: solid 1px #7fb9d3;
+    margin-bottom: 7px;
 }
 .footer-article div p{
     width: 100%;
@@ -160,7 +162,7 @@ footer .redesSociales{
     padding: 4px 25%
 }
 footer .redesSociales i{
-    color: rgb(255, 195, 0, 0.9);
+    color: rgb(37, 89, 157);
     font-size: 1.4rem;
 }
 
@@ -194,7 +196,7 @@ footer .redesSociales i{
         text-align: center;
         align-items: center;
         padding: 5px 2px;
-        background-color: #9acbf9;
+        background-color: #7fc1e1;
         margin-top: 101.5px;
     }
     header .site-navbar li{
@@ -297,13 +299,12 @@ footer .redesSociales i{
         display: block;
     }
     footer .footer-article .categorias article:hover article p a{
-        color: rgb(255, 195, 0, 0.9);
+        color: #023047;
     }
     footer .redesSociales i{
         transition: all 0.3s;
     }
     footer .redesSociales i:hover{
-        color: rgb(37, 89, 157);
         font-size: 1.8rem;
     }
 }
