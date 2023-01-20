@@ -2,7 +2,7 @@
   "name": "proyectointegrador",
   "version": "1.0.0",
   "description": "<h1>Patitas y Bigotes</h1>",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
     "start": "nodemon app.js"
   },
