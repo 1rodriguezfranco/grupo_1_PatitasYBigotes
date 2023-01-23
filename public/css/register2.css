@@ -13,6 +13,7 @@
 .container{
     margin-top: 107px;
 }
+
 @media (min-width: 460px){
     .container{
         margin-top: 25px;
