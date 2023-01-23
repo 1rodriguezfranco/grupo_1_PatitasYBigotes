@@ -4,6 +4,7 @@ const path = require('path');
 const PORT = 3000;
 const mainRouter = require("./routes/mainRoutes");
 const authRouter = require("./routes/authRoutes");
+const adminRouter = require("./routes/adminRoutes");
 
 app.use(express.static(path.join(__dirname, "../public")));
 
@@ -16,3 +17,4 @@ app.listen(PORT, () => {
 
 app.use("/", mainRouter);
 app.use("/auth", authRouter);
+app.use("/admin", adminRouter);

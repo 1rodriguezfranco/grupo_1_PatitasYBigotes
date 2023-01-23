@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/register2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto:ital,wght@0,400;1,100&display=swap'); </style>
+    <script src="https://kit.fontawesome.com/9fc2b02ed9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include("./partials/header") %>  
+
+    <div class="container">
+        <div class="row display-flex justify-content-center mt-2 mb-5">
+            <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
+                <div id="buttons">
+                    <h1 class="mb-3 text-center">Registro</h1>
+                <div class="form-group text-center">
+                    <button class="button-register3" type="button">Ingresar con Gmail</button>
+                </div>
+                <div class="form-group mt-1 mb-1 text-center">
+                    <button class="button-register2" type="button">Ingresar con Facebook</button>
+                </div>
+                <div class="form-group mt-1 mb-1 text-center">
+                    <button class="button-register" type="button" onclick="showForm()">Ingresar con usuario y password</button>
+                </div>
+                </div>
+                
+                <form id="form" class="form-register">
+                    <div class="form-group">
+                      <label for="name">Nombre y Apellido</label>
+                      <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                      </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Confirma tu contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="image" class="form-label">Carga una foto</label>
+                        <input class="form-control" type="file" id="image">
+                    </div>
+                    <div class="form-group">
+                      <label for="category">Seleccione la categoria de su mascota</label>
+                      <select class="form-control" id="category" name="category">
+                        <option value="none">Select</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="pez">Pez</option>
+                        <option value="roedor">Roedor</option>
+                        <option value="aves">Aves</option>
+                      </select>
+                    </div><br>
+                    <div class="container my-3">
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary btn-lg" onclick="backForm()">Reset</button>
+                            <button type="button" class="btn btn-secondary btn-lg">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("./partials/footer") %>
+
+    <script>
+        function showForm() {
+            const element = document.getElementById('form')
+            element.style.display = 'block'
+
+            const element1 = document.getElementById('buttons')
+            element1.style.display = 'none'
+        }
+
+        function backForm() {
+            const element = document.getElementById('form')
+            element.style.display = 'none'
+
+            const element1 = document.getElementById('buttons')
+            element1.style.display = 'block'
+        }
+    </script>
+
+<body>
+</html>

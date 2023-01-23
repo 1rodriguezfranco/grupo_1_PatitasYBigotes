@@ -20,31 +20,14 @@
     <%- include("./partials/header") %>  
 
 <form class="formulario" action="/register" method="POST">
-    <div class="contenedor-registro">    
-        <div class="registro">
-            <h4>
-                Datos personales: 
-            </h4><br>
-            <div><input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido"></input></div><br>
-            <div><input type="text" name="domicilio" id="domicilio" placeholder="Domicilio"></input></div> <br>
-            <div><input type="text" name="localidad" id="localidad" placeholder="Localidad"></input></div><br>
-            <div><input type="number" name="telefono" id="telefono" placeholder="Nro. de Telefono"></input></div>
-        </div>
-        <div class="registro">
-            <h4>
-                Datos de tu mascota:
-            </h4><br>
-            <div><input type="text" name="nombre" id="nombre" placeholder="Nombre"></input></div><br>
-            <div><input type="text" name="tipo" id="tipo" placeholder="Tipo (perro, gato, roedor, pez, etc.)"></input></div><br>
-            <div><input type="number" name="edad" id="edad" placeholder="Edad"></input></div><br> 
-            <div><input type="number" name="peso" id="peso" placeholder="peso"></input></div>
-        </div>
-    </div> 
     
     <div class="contenedor-mail"> 
             <div class="registro2"> 
             <h4 class="buttons2">Registro:</h4><br>
         <div class="buttons2"><input type="email" name="email" id="email" placeholder="Introduce tu correo electronico"></input></div><br>
+        <div class="buttons2"><input type="password" name="password" id="password" placeholder="Introduce tu contraseña"></input></div><br>
+        <div class="buttons2"><input type="password" name="password" id="password" placeholder="Confirma tu contraseña"></input></div><br>
+        
             
                 <div class="buttons2"><button class="links"> Registrate con Facebook </button></div><br>
                 <div class="buttons2"><button class="links2"> Registrate con Gmail </button></div><br>
