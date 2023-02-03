@@ -1,0 +1,84 @@
+[
+  {
+    "id": "15",
+    "name": "Purina Defeco",
+    "description": "Alimento para trolos",
+    "product_image": "IMG_2120 Grande.jpeg",
+    "category": "roedor",
+    "price": "129",
+    "discount": "4",
+    "image": "default-image.png"
+  },
+  {
+    "id": 16,
+    "name": "Batata",
+    "description": "adsfasd",
+    "image": "product_image-1675284559316-839485157.jpeg",
+    "category": "perro",
+    "price": 560,
+    "discount": 12
+  },
+  {
+    "id": 17,
+    "name": "Batata",
+    "description": "para emadurnar",
+    "image": "product_image-1675378361564-910825474.jpeg",
+    "category": "roedor",
+    "price": 9008,
+    "discount": 5
+  },
+  {
+    "id": 18,
+    "name": "batata",
+    "description": "para embadurnar",
+    "image": "product_image-1675378610958-386497628.jpeg",
+    "category": "roedor",
+    "price": 234234,
+    "discount": 3
+  },
+  {
+    "id": 19,
+    "name": "Batata",
+    "description": "lak;sdng;ajsd",
+    "image": "product_image-1675378736091-156692309.jpeg",
+    "category": "roedor",
+    "price": 2344,
+    "discount": 9
+  },
+  {
+    "id": 20,
+    "name": "batata",
+    "description": "al;ksfjga;",
+    "image": "product_image-1675378912474-699042224.jpeg",
+    "category": "gato",
+    "price": 23432,
+    "discount": 12
+  },
+  {
+    "id": 21,
+    "name": "frambuesa",
+    "description": "chica",
+    "image": "product_image-1675384284405-112160992.jpg",
+    "category": "perro",
+    "price": 22,
+    "discount": 3
+  },
+  {
+    "id": 22,
+    "name": "batataadas",
+    "description": "askjhgajksd",
+    "image": "product_image-1675386722291-665795273.jpeg",
+    "category": "gato",
+    "price": 32,
+    "discount": 3
+  },
+  {
+    "id": 23,
+    "name": "pichi ",
+    "description": "kljsdgja",
+    "image": "product_image-1675462416396-811886086.jpeg",
+    "category": "perro",
+    "price": 9000,
+    "discount": 4
+  }
+]
