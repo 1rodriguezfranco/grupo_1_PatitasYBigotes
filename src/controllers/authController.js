@@ -25,7 +25,7 @@ const authController = {
 
         fs.writeFileSync(usersFilePath, JSON.stringify(usersList, null, 2));
 
-		return res.redirect("/");
+		return res.redirect("/login");
     },
 
     register2: (req, res) => res.render ("register2"),

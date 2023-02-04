@@ -73,5 +73,5 @@ function guardarProducto(productToStore) {
 
 	fs.writeFileSync(productsFilePath, JSON.stringify(productList, null, 2)); 
 }
-//-------------------------------
+
 module.exports = controller;
