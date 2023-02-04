@@ -80,5 +80,14 @@
     "category": "perro",
     "price": 9000,
     "discount": 4
+  },
+  {
+    "id": 24,
+    "name": "Comida 15kg",
+    "description": "sdfisofigodsnfg",
+    "image": "product_image-1675466690244-347781674.jpg",
+    "category": "perro",
+    "price": 1500,
+    "discount": 50
   }
 ]

@@ -48,6 +48,7 @@ const controller = {
 			image: req.file?.filename ? req.file.filename : "default-image.png"
 		}
 		guardarProducto(product)
+
 		return res.redirect("/");
 	}
 
@@ -71,7 +72,7 @@ function guardarProducto(productToStore) {
 		return prod;
 	});
 
-	fs.writeFileSync(productsFilePath, JSON.stringify(productList, null, 2));
+	fs.writeFileSync(productsFilePath, JSON.stringify(productList, null, 2)); 
 }
 //-------------------------------
 module.exports = controller;
