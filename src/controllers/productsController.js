@@ -53,7 +53,6 @@ const controller = {
 
 };
 
-
 //FUNCIONES
 
 function getProductList(path) {

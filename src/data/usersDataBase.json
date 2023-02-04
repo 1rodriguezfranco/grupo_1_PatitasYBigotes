@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Agustin Santucho",
+    "email": "gorditoculosucio",
+    "password": "holahola",
+    "confirmPassword": "holahola",
+    "image": "perro.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Franco",
+    "email": "fran@gmail.com",
+    "password": "4nHsZtXg7ijkEmp",
+    "confirmPassword": "4nHsZtXg7ijkEmp",
+    "image": "default-image.png"
+  }
+]
