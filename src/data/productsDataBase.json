@@ -89,5 +89,14 @@
     "category": "perro",
     "price": 1500,
     "discount": 50
+  },
+  {
+    "id": 25,
+    "name": "Huesito",
+    "description": "AKDMKLADSM",
+    "image": "product_image-1675565904440-853319353.jpeg",
+    "category": "perro",
+    "price": 13000,
+    "discount": 50
   }
 ]
