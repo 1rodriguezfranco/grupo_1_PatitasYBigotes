@@ -5,14 +5,14 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
-
 const app = express();
+const PORT = 3000;
 
 // ************ Middlewares - ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
+app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
-app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el formulario por PUT y DELETE
 //---------------------------------------------------------------------------------------------------------------------------
@@ -20,17 +20,14 @@ app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el f
 app.set ("view engine", "ejs");
 app.set ("views", path.join(__dirname, "views"));
 
-const PORT = 3000;
-
 // ************ Route System require and use() ************
 const mainRouter = require("./routes/mainRoutes");
 const authRouter = require("./routes/authRoutes");
-const adminRouter = require("./routes/products");
+const adminRouter = require("./routes/productsRoutes");
 
 app.use("/", mainRouter);
 app.use("/auth", authRouter);
 app.use("/admin", adminRouter);
-
 
 // ************ catch 404 and forward to error handler ************
 app.use((req, res, next) => next(createError(404)));

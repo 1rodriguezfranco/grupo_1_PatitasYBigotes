@@ -37,8 +37,8 @@
                     <input class="form-control" type="file" id="file" name="product_image">
                 </div>
                 <div class="form-group">
-                  <label for="category">Seleccione la categoria</label>
-                  <select class="form-control" id="category" name="category">
+                  <label for="mascota">Seleccione la mascota</label>
+                  <select class="form-control" id="mascota" name="mascota">
                     <option value="">Select</option>
                     <option value="perro">Perro</option>
                     <option value="gato">Gato</option>
@@ -46,6 +46,16 @@
                     <option value="aves">Aves</option>
                   </select>
                 </div>
+                <div class="form-group">
+                    <label for="categoria">Seleccione la categoria</label>
+                    <select class="form-control" id="categoria" name="categoria">
+                      <option value="">Select</option>
+                      <option value="alimentos">Alimentos</option>
+                      <option value="accesorios">Accesorios</option>
+                      <option value="estetica">Estética e higiene</option>
+                      <option value="salud">Salud</option>
+                    </select>
+                  </div>
                 <div class="form-group">
                     <label for="price">Precio del producto</label>
                     <input type="text" class="form-control" id="price" name="price" placeholder="$" value="<%= product.price %>">

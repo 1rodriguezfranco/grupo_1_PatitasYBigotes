@@ -22,15 +22,17 @@ const controller = {
 			name: req.body.name,
 			description: req.body.description,
 			image: req.file?.filename ? req.file.filename : "default-image.png",
-            category: req.body.category,
+			mascota: req.body.mascota,
+            categoria: req.body.categoria,
             price: Number(req.body.price),
-            discount: Number(req.body.discount),	
+            discount: Number(req.body.discount),
+			finalPrice: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
 		}
 		products.push(product);
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
 
-		return res.redirect("/");
+		return res.redirect("/admin/createproduct");
 	},
 	// Update - Form to edit
 	edit: (req, res) => {

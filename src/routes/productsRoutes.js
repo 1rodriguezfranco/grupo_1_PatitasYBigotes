@@ -22,6 +22,7 @@ const upload = multer({ storage: storage })
 // ************ Controller Require ************
 const productsController = require("../controllers/productsController");
 
+
 /*** CREATE ONE PRODUCT ***/
 router.get('/createproduct', productsController.create);
 router.post('/createproduct', upload.single("product_image"), productsController.store);
