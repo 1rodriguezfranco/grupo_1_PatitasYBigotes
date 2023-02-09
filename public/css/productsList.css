@@ -1,0 +1,107 @@
+main{
+    margin-top: 101.5px;
+}
+main h3{
+    font-size: 1.6rem;
+    font-weight: lighter;
+    padding: 2px 4px;
+}
+.listadoProductos{
+    padding: 8px 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.producto{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid rgb(255, 195, 0, 0.9);
+    border-radius: 5%;
+    justify-content: center;
+    margin: 2px;
+}
+.producto .imagen{
+    width: 100%;
+}
+.producto img{
+    width: 100%;
+    padding: 1px;
+    border-radius: 5%;
+    border-bottom: 1px solid rgb(255, 195, 0, 0.9);
+}
+.producto .nombre{
+    width: 95%;
+    font-size: 1.1rem;
+}
+.producto .descripcion{
+    width: 95%;
+    font-size: 1rem;
+    font-weight: lighter;
+    font-style: oblique;
+    padding-left: 2px;
+    color: rgba(117, 113, 113, 0.905);
+}
+.producto .precio{
+    width: 95%;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.agregarCarrito{
+    width: 130px;
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    background-color: #0071FF;
+    border: solid 1px #0071FF;
+    border-radius: 8%;
+    margin: 2px;
+}
+.producto .compra{
+    width: 40%;
+    text-decoration: none;
+}
+.comprar{
+    width: 65px;
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    background-color: green;
+    border: solid 1px green;
+    border-radius: 10%;
+    margin: 2px;
+}
+
+@media (min-width: 460px){
+    main{
+        margin-top: 0;
+    }
+    .producto{
+        width: 203.4px;
+        height: 340px;
+    }
+}
+
+@media (min-width: 769px){
+    main .listadoProductos .productos .producto{
+        transition: all 0.3s;
+    }
+    main .listadoProductos .productos .producto:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        border-color: rgb(37, 89, 157);
+        width: 213.4px;
+        height: 350px;
+    }
+    main .listadoProductos .productos .producto:hover img{
+        border-color: rgb(37, 89, 157);
+    }
+}

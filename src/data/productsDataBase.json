@@ -1,24 +1,46 @@
 [
   {
-    "id": "1",
-    "name": "FrancoAAAAAA",
-    "description": "SSDAF",
-    "product_image": "",
+    "id": 1,
+    "name": "Balanceado Old Prince 15kg",
+    "description": "Alimento para perro adulto",
+    "image": "product_image-1675954430669-259951498.jpg",
     "mascota": "perro",
-    "categoria": "alimentos|",
-    "price": "10000",
-    "discount": "50",
-    "image": "default-image.png"
+    "categoria": "alimentos",
+    "price": 10000,
+    "discount": 10,
+    "finalPrice": 9000
   },
   {
     "id": 2,
-    "name": "AAAA",
-    "description": "sss",
-    "image": "product_image-1675890864589-221323526.jpg",
+    "name": "Balanceado Excellent Purina 7.5kg",
+    "description": "Alimento para gato adulto",
+    "image": "product_image-1675954461646-572391113.jpg",
+    "mascota": "gato",
+    "categoria": "alimentos",
+    "price": 8500,
+    "discount": 20,
+    "finalPrice": 6800
+  },
+  {
+    "id": 3,
+    "name": "Balanceado Zootec TropMix Pericos",
+    "description": "Alimento para pericos 1kg",
+    "image": "product_image-1675954500424-266525827.jpg",
+    "mascota": "aves",
+    "categoria": "alimentos",
+    "price": 2500,
+    "discount": 0,
+    "finalPrice": 2500
+  },
+  {
+    "id": 4,
+    "name": "Heno Puppis 500g",
+    "description": "Alimento para conejos",
+    "image": "product_image-1675954540501-856150869.jpg",
     "mascota": "roedor",
     "categoria": "alimentos",
-    "price": 10000,
-    "discount": 50,
-    "finalPrice": 5000
+    "price": 3000,
+    "discount": 5,
+    "finalPrice": 2850
   }
 ]
