@@ -48,7 +48,9 @@
                 <div class="edit-delete">
                     <!-- VISIBLE PARA ADMINS -->
                     <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
-                    <button type="submit" class="eliminar">Eliminar</button>
+                    <form action="/productdetails/<%= product.id %>?_method=DELETE" method="post">
+                        <button type="submit" class="eliminar">Eliminar</button>
+                    </form>
                 </div>
             </div>
         </section>

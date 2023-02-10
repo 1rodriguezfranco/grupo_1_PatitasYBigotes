@@ -32,8 +32,5 @@ router.post('/createproduct', upload.single("product_image"), productsController
 router.get('/editproduct/:id', productsController.edit);
 router.put('/editproduct/:id', upload.single("product_image"), productsController.update);
 
-/*** DELETE ONE PRODUCT***/ 
-router.delete('/editproduct/:id', productsController.destroy); 
-
 
 module.exports = router;

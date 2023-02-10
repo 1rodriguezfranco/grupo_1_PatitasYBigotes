@@ -52,15 +52,7 @@ const controller = {
 		guardarProducto(product)
 
 		return res.redirect("/");
-	},
-	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-
-		eliminarProducto(req.params.id);
-		
-		return res.redirect('/productsList');
 	}
-
 };
 
 //FUNCIONES
@@ -80,14 +72,6 @@ function guardarProducto(productToStore) {
 	});
 
 	fs.writeFileSync(productsFilePath, JSON.stringify(productList, null, 2)); 
-}
-
-function eliminarProducto(id){
-	let productos = getProductList(productsFilePath);
-	products = productos.filter(product => product.id != id);
-
-	fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2)); 
-
 }
 
 module.exports = controller;

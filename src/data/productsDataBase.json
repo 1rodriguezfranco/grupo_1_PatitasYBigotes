@@ -1,16 +1,5 @@
 [
   {
-    "id": "1",
-    "name": "Balanceado Old Prince 15kg",
-    "description": "Alimento para perro adulto",
-    "image": "product_image-1675890465319-719704971.jpg",
-    "mascota": "perro",
-    "categoria": "alimentos",
-    "price": "10000",
-    "discount": "10",
-    "finalPrice": 5000
-  },
-  {
     "id": 2,
     "name": "Balanceado Excellent Purina 7.5kg",
     "description": "Alimento para gato adulto",
