@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/stylesproductdetails.css">
     <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/9fc2b02ed9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/stylesproductdetails.css">
     <title>Patitas</title>
 </head>
 <body>
@@ -16,20 +16,44 @@
     <%- include("./partials/header") %>
 
 <!-- PRODUCTO -->
-<div class="info">
-<article class="article">
-    <section class="section">
-        <h2>Alimento Excellent Pollo Y Arroz para Gato - 7,5 Kg</h2>
-        <div class="preview">            
-            <img src="images/alimento123.jpg" alt="fotoproducto" class="producto">
-            <p class="detalle"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa ut voluptas nobis consequatur ducimus pariatur, dolores ratione. Temporibus, quam veniam doloremque deserunt, possimus amet cupiditate maxime quibusdam praesentium facere tempore.</p>
-            <p class="precioanterior"> Antes $ 10.500,00</p>
-            <p class="precioactual"> Ahora $ 7.794,00</p>
-        </div>
-        <a href="" class="btn"><button>Agregar al carrito</button></a>        
-    </section>
-</article>
-</div>
+<main class="infoProduct">
+    <article class="article">
+
+        <section class="section">
+            <h2><%= product.name %></h2>
+            <div class="preview">
+                <img src="/images/<%= product.image %>" class="producto">
+                <p class="detalle"> <%= product.description %></p>
+                <p class="precioanterior">$ <%= product.price %></p>
+                <p class="precioactual">$ <%= product.finalPrice %></p>
+                <div class="buttons">
+                    <button type="button" class="agregarCarrito">Agregar al carrito</button>
+                    <button type="button" class="comprar">Comprar ahora</button>
+                </div>
+            </div>
+            <div class="edit-delete">
+                <!-- VISIBLE PARA ADMINS -->
+                <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
+                <button type="submit" class="eliminar">Eliminar</button>
+            </div>
+        </section>
+
+        <section class="detalleTablet">
+            <div class="detalleProductoAmpliado">
+                <p class="detalleAmplio">Acá va la descripción amplia</p>
+                <div class="buttons">
+                    <button type="button" class="agregarCarrito">Agregar al carrito</button>
+                    <button type="button" class="comprar">Comprar ahora</button>
+                </div>
+                <div class="edit-delete">
+                    <!-- VISIBLE PARA ADMINS -->
+                    <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
+                    <button type="submit" class="eliminar">Eliminar</button>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
 <!-- END PRODUCTO -->
 
 <!-- FOOTER -->

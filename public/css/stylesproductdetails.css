@@ -1,155 +1,210 @@
 /* SECTION MOBILE Y DESKTOP*/ 
+    .infoProduct{
+        display: flex;
+        margin-top: 101.5px;
+        justify-content: center;
+    }
+    .infoProduct .article{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
 
 
-        .info{
-            display: flex;
-            background-color: rgba(255, 196, 0, 0.8);
-            width: 100%;                    
-            margin-top: 110px;
-            justify-content: center;
-        }
-        
-        .preview{
-            display: flex;
-            flex-direction: column;            
-        }
+    .infoProduct article section h2{
+        font-size: 1.4rem;
+        font-weight: lighter;
+    }
+    .preview{
+        display: flex;
+        flex-direction: column;
+    }
+    .infoProduct .article .section{
+        padding: 10px;
+        border: solid 1px rgb(255, 195, 0, 0.9);
+        border-radius: 25px;
+        width: 204px;
+        height: 488px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }       
+    .infoProduct .article .section .preview{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .infoProduct .article .section .preview img{
+        width: 100%;
+        height: 100%;
+    }
+    .infoProduct .article .section .preview .detalle{
+        font-size: 1.1rem;
+        font-style: oblique;
+        color: rgba(0, 0, 0, 0.429);
+    }
+    .infoProduct .article .section .preview p{
+        font-size: 1.2rem;
+        padding: 3px;
+    }
+    .infoProduct .article .section .preview .precioanterior{
+        text-decoration:line-through;
+        color: rgba(0, 0, 0, 0.429);
+    }
+    .section .preview button{
+        margin: 2.5px 0px;
+    }
+    .section .preview .buttons .agregarCarrito{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: whitesmoke;
+        border: solid 1px rgb(37, 89, 157);
+        border-radius: 50px;
+        cursor: pointer;
+        color: rgb(37, 89, 157);
+    }
+    .section .preview .buttons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section .preview .buttons .comprar{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: rgb(16, 114, 16);
+        border: solid 1px rgb(13, 78, 13);
+        border-radius: 50px;
+        cursor: pointer;
+        color: white
+    }
+    .section .edit-delete{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .section .edit-delete .editar{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: rgb(212, 139, 3);
+        border: solid 1px rgb(249, 162, 1);
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        margin: 2px;
+    }
+    .section .edit-delete .eliminar{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: rgb(212, 3, 3);
+        border: solid 1px rgb(255, 0, 0);
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        margin: 2px;
+    }
 
-        .btn{
-            position: relative;
-            left: 120px;
-        }
-        
-        .info .article{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
 
-        
-        .info .article .section{
-            margin: 10px;
-            padding: 25px;
-            background-color: whitesmoke;
-            border-radius: 25px;
-            align-items: center;
-            justify-content: center;
-            width: 65vw;
-            position: relative;                                         
-        }       
+    .infoProduct .article .detalleTablet{
+        display: none;
+    }
 
-            .info .article .section h2{
-            font-size: 1rem;
-        }
-
-        .info .article .section .preview{
-            align-items: center;
-            justify-content: center;
-        }
-
-    .info .article .section .preview .precioanterior{
-            align-items: center;
-            text-decoration:line-through;
-            justify-content: center;
-        }
-
-        .info .article .section .preview .precioactual{
-            align-items: center;
-            
-        }
-
-        .info .article .section .preview img{
-            width: auto;
-            height: 200px;                        
-        }
-
-        .info .article .section .preview .precioanterior{
-            padding: 5px;
-        }
-
-        .info .article .section .preview .precioactual{
-            padding: 5px;
-        }
-
-        .section .btn button{
-            font-weight: 700;
-            color: rgb(255, 195, 0);
-            opacity: 90%;
-            padding: 9px 25px;
-            background-color: rgb(31, 97, 141 );
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3 ease 0s;
-            }
-        
-            .section .btn button:hover{
-                background-color: #e2504c;
-                color: rgb(255, 195, 0);
-                transform: scale(1.1);
-            }
-            
-
-       
 
 @media (min-width: 460px){
-    .info{
+    .infoProduct{
         margin-top: 0px;
+        padding: 15px;
     }
-    
-    header .site-navbar{
-        margin-top: 80px;
-    }  
-}
+    .infoProduct .article{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: white;
+        padding: 5px;
+        border: solid 1px rgb(255, 195, 0, 0.9);
+        border-radius: 25px;
+        width: 387px
+    }
 
-@media (min-width: 769px){
-    .producto{
-        width: 30%;
-    }
-    .producto .nombre{
-        font-size: 4vw;
-    }
-    .producto .descripcion{
-        font-size: 3vw;
-    }
-    .producto .precio{
-        font-size: 4vw;
-    }
-    .agregarCarrito{
-        font-size: 3.5vw;
-    }
-    .comprar{
-        font-size: 3.5vw;
-    }
-    .info .article .section{
-        width: 438px;
-    }
-}
-@media (min-width: 1280px){
-    .producto{
-        width: 22%;
-    }
-    .producto .nombre{
-        font-size: 3vw;
-    }
-    .producto .descripcion{
-        font-size: 2vw;
-    }
-    .producto .precio{
-        font-size: 3vw;
-    }
-    .agregarCarrito{
-        font-size: 2.5vw;
-    }
-    .comprar{
-        font-size: 2.5vw;
-    }
-}
 
-.derechos{
-    padding: 15px 10px;
-    text-align: center;
-}
+    .infoProduct .article .section{
+        padding: 10px;
+        border: none;
+        width: 200px;
+        height: 375px;
+    }
+    .infoProduct .article .section h2{
+        height: 0px;
+    }
+    .infoProduct .article .section .preview img{
+        width: 90%;
+        height: 60%;
+    }
+    .infoProduct .article .section .preview .buttons{
+        display: none;
+    }
+    .infoProduct .article .section .edit-delete{
+        display: none;
+    }
 
-.derechos small{
-    font-size: 15px;
+
+    .infoProduct .article .detalleTablet{
+        display: block;
+        padding: 10px;
+        width: 175px;
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .detalleAmplio{
+        font-size: 1.1rem;
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons button{
+        margin: 2.5px 0px;
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons .agregarCarrito{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: whitesmoke;
+        border: solid 1px rgb(37, 89, 157);
+        border-radius: 50px;
+        cursor: pointer;
+        color: rgb(37, 89, 157);
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons .comprar{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: rgb(16, 114, 16);
+        border: solid 1px rgb(13, 78, 13);
+        border-radius: 50px;
+        cursor: pointer;
+        color: white
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .edit-delete{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .edit-delete .editar{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: rgb(212, 139, 3);
+        border: solid 1px rgb(249, 162, 1);
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        margin: 2px;
+    }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .edit-delete .eliminar{
+        font-size: 1rem;
+        padding: 7px 15px;
+        background-color: rgb(212, 3, 3);
+        border: solid 1px rgb(255, 0, 0);
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        margin: 2px;
+    }
 }

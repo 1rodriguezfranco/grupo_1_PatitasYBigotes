@@ -1,14 +1,14 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Balanceado Old Prince 15kg",
     "description": "Alimento para perro adulto",
-    "image": "product_image-1675954430669-259951498.jpg",
+    "image": "product_image-1675890465319-719704971.jpg",
     "mascota": "perro",
     "categoria": "alimentos",
-    "price": 10000,
-    "discount": 10,
-    "finalPrice": 9000
+    "price": "10000",
+    "discount": "10",
+    "finalPrice": 5000
   },
   {
     "id": 2,

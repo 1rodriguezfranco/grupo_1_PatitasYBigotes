@@ -15,18 +15,17 @@ main h3{
 
 .productos{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    margin: 5px;
 }
 .producto{
-    width: 45%;
+    width: 40vw;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid rgb(255, 195, 0, 0.9);
     border-radius: 5%;
     justify-content: center;
-    margin: 2px;
 }
 .producto .imagen{
     width: 100%;
@@ -55,7 +54,9 @@ main h3{
     font-weight: bolder;
     text-align: center;
 }
-
+.producto .agregar{
+    text-decoration: none;
+}
 .agregarCarrito{
     width: 130px;
     font-size: 1.1rem;

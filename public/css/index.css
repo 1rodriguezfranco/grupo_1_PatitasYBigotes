@@ -109,6 +109,9 @@ main{
     font-weight: bolder;
     text-align: center;
 }
+.producto .agregar{
+    text-decoration: none;
+}
 .agregarCarrito{
     width: 125px;
     font-size: 1.1rem;
