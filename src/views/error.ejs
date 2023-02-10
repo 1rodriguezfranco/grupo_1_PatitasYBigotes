@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/error.css">
     <title>Patitas y Bigotes</title>
 </head>
 <body>
@@ -15,6 +16,22 @@
     <%- include("./partials/header") %>
 
     <main>
+
+        <section class="error">
+
+            <div class="icons">
+                <i class="fa-solid fa-paw" id="huella"></i>
+                <i class="fa-solid fa-magnifying-glass" id="search"></i>
+            </div>
+
+            <div class="mensaje">
+                <p>¡Ups!</p>
+                <p>No encontramos resultados para tu búsqueda</p>
+            </div>
+
+        </section>
+
+
         <section class="productosPorImagen">
             <h3>Productos para cada mascota</h3>
             <article class="mascotas">
