@@ -31,5 +31,16 @@
     "price": 3000,
     "discount": 5,
     "finalPrice": 2850
+  },
+  {
+    "id": 5,
+    "name": "Alimento Excellent Pollo y Arroz - 15kg",
+    "description": "Alimento para perro adulto (+7)",
+    "image": "product_image-1676220115325-437188477.jpg",
+    "mascota": "perro",
+    "categoria": "alimentos",
+    "price": 10895,
+    "discount": 15,
+    "finalPrice": 9260.75
   }
 ]

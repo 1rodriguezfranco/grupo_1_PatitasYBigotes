@@ -1,2 +1,50 @@
 [
+  {
+    "id": 1,
+    "name": "Franco Rodriguez",
+    "email": "98francorodriguez@gmail.com",
+    "password": "Holahola123",
+    "confirmPassword": "Holahola123",
+    "image": "default-image.png"
+  },
+  {
+    "id": 2,
+    "name": "Franco Rodriguez",
+    "email": "98francorodriguez@gmail.com",
+    "password": "Hola123",
+    "confirmPassword": "Hola123",
+    "image": "default-image.png"
+  },
+  {
+    "id": 3,
+    "name": "Esteban",
+    "email": "esteban@gmail.com",
+    "password": "123456789",
+    "confirmPassword": "123456789",
+    "image": "avatar-1676583138758-600617566.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Franco",
+    "email": "faas@gmail.com",
+    "password": "123456",
+    "confirmPassword": "123456",
+    "image": "avatar-1676583390296-478578482.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "asdas",
+    "email": "sadasd@gmail.com",
+    "password": "123456789",
+    "confirmPassword": "123456789",
+    "image": "default-image.png"
+  },
+  {
+    "id": 6,
+    "name": "Franco Rodriguez",
+    "email": "fra64@gmail.com",
+    "password": "$2a$10$A9uWZI/yNI8zp7pwnWiyC.7kQRDm3ZrY6tr19JopDiF5CvSeWygjm",
+    "confirmPassword": "$2a$10$CRZ2IC8pZA4E215b3ebE0Od4LdkvcWyhLFjG3BqtTRN2VfmB.fp7a",
+    "avatar": "avatar-1676675011503-993294168.jpg"
+  }
 ]
