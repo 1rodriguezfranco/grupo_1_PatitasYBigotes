@@ -80,13 +80,13 @@ header .cart i{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.form{
+header .center-header .form{
     width: 85%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.form .input{
+header .center-header .form .input{
     background-color: #FFF;
     border: 1px solid rgb(37, 89, 157);
     outline: none;
@@ -96,7 +96,7 @@ header .cart i{
     height: 25px;
     font-size: 1.1rem;
 }
-.form .submit{
+header .center-header .form .submit{
     background-color: #FFF;
     border: 1px solid rgb(37, 89, 157);
     color: rgb(37, 89, 157);

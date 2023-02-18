@@ -15,10 +15,6 @@
         font-size: 1.4rem;
         font-weight: lighter;
     }
-    .preview{
-        display: flex;
-        flex-direction: column;
-    }
     .infoProduct .article .section{
         padding: 10px;
         border: solid 1px rgb(255, 195, 0, 0.9);
@@ -34,6 +30,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
     .infoProduct .article .section .preview img{
         width: 100%;
@@ -52,10 +49,10 @@
         text-decoration:line-through;
         color: rgba(0, 0, 0, 0.429);
     }
-    .section .preview button{
+    .infoProduct .article .section .preview button{
         margin: 2.5px 0px;
     }
-    .section .preview .buttons .agregarCarrito{
+    .infoProduct .article .section .preview .buttons .agregarCarrito{
         font-size: 1rem;
         padding: 7px 15px;
         background-color: whitesmoke;
@@ -64,12 +61,12 @@
         cursor: pointer;
         color: rgb(37, 89, 157);
     }
-    .section .preview .buttons{
+    .infoProduct .article .section .preview .buttons{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .section .preview .buttons .comprar{
+    .infoProduct .article .section .preview .buttons .comprar{
         font-size: 1rem;
         padding: 7px 15px;
         background-color: rgb(16, 114, 16);
@@ -78,12 +75,12 @@
         cursor: pointer;
         color: white
     }
-    .section .edit-delete{
+    .infoProduct .article .section .edit-delete{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .section .edit-delete .editar{
+    .infoProduct .article .section .edit-delete .editar{
         font-size: 1rem;
         padding: 7px 15px;
         background-color: rgb(212, 139, 3);
@@ -93,7 +90,7 @@
         color: white;
         margin: 2px;
     }
-    .section .edit-delete .eliminar{
+    .infoProduct .article .section .edit-delete .eliminar{
         font-size: 1rem;
         padding: 7px 15px;
         background-color: rgb(212, 3, 3);
@@ -126,7 +123,6 @@
         width: 387px
     }
 
-
     .infoProduct .article .section{
         padding: 10px;
         border: none;
@@ -146,7 +142,6 @@
     .infoProduct .article .section .edit-delete{
         display: none;
     }
-
 
     .infoProduct .article .detalleTablet{
         display: block;

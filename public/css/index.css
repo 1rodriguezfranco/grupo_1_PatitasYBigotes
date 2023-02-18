@@ -16,13 +16,13 @@ main{
     color: white;
     padding: 2px 4px;
 }
-.mascotas{
+.productosPorImagen .mascotas{
     width: 100%;
     padding: 5px 0px;
     display: flex;
     justify-content: space-around;
 }
-.mascotas div img{
+.productosPorImagen .mascotas div img{
     width: 23vw;
     height: 20vw;
     border-radius: 50%;
@@ -67,12 +67,12 @@ main{
     font-weight: lighter;
     padding: 2px 4px;
 }
-.productos{
+.productosPreferidos .productos{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.producto{
+.productosPreferidos .producto{
     width: 45%;
     height: 100%;
     display: flex;
@@ -82,20 +82,20 @@ main{
     justify-content: center;
     margin: 2px;
 }
-.producto .imagen{
+.productosPreferidos .producto .imagen{
     width: 100%;
 }
-.producto img{
+.productosPreferidos .producto img{
     width: 100%;
     padding: 1px;
     border-radius: 5%;
     border-bottom: 1px solid rgb(255, 195, 0, 0.9);
 }
-.producto .nombre{
+.productosPreferidos .producto .nombre{
     width: 95%;
     font-size: 1.1rem;
 }
-.producto .descripcion{
+.productosPreferidos .producto .descripcion{
     width: 95%;
     font-size: 1rem;
     font-weight: lighter;
@@ -103,16 +103,16 @@ main{
     padding-left: 2px;
     color: rgba(117, 113, 113, 0.905);
 }
-.producto .precio{
+.productosPreferidos .producto .precio{
     width: 95%;
     font-size: 1.1rem;
     font-weight: bolder;
     text-align: center;
 }
-.producto .agregar{
+.productosPreferidos .producto .agregar{
     text-decoration: none;
 }
-.agregarCarrito{
+.productosPreferidos .producto .agregarCarrito{
     width: 125px;
     font-size: 1.1rem;
     color: white;
@@ -122,11 +122,11 @@ main{
     border-radius: 10%;
     margin: 2px;
 }
-.producto .compra{
+.productosPreferidos .producto .compra{
     width: 40%;
     text-decoration: none;
 }
-.comprar{
+.productosPreferidos .producto .compra .comprar{
     width: 65px;
     font-size: 1.1rem;
     color: white;
@@ -142,7 +142,7 @@ main{
     main{
         margin-top: 0;
     }
-    .mascotas div img{
+    .productosPorImagen .mascotas div img{
         width: 105.8px;
         height: 95px;
     }
@@ -150,7 +150,7 @@ main{
         width: 128.8px;
         height: 118.9px;
     }
-    .producto{
+    .productosPreferidos .producto{
         width: 203.4px;
         height: 340px;
     }

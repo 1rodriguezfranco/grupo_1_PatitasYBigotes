@@ -1,7 +1,7 @@
 main{
     margin-top: 101.5px;
 }
-main h3{
+main .titleProductList{
     font-size: 1.6rem;
     font-weight: lighter;
     padding: 2px 4px;
@@ -13,12 +13,12 @@ main h3{
     justify-content: center;
 }
 
-.productos{
+.listadoProductos .productos{
     display: flex;
     justify-content: center;
     margin: 5px;
 }
-.producto{
+.listadoProductos .productos .producto{
     width: 40vw;
     height: 100%;
     display: flex;
@@ -27,20 +27,20 @@ main h3{
     border-radius: 5%;
     justify-content: center;
 }
-.producto .imagen{
+.listadoProductos .productos .producto .imagen{
     width: 100%;
 }
-.producto img{
+.listadoProductos .productos .producto img{
     width: 100%;
     padding: 1px;
     border-radius: 5%;
     border-bottom: 1px solid rgb(255, 195, 0, 0.9);
 }
-.producto .nombre{
+.listadoProductos .productos .producto .nombre{
     width: 95%;
     font-size: 1.1rem;
 }
-.producto .descripcion{
+.listadoProductos .productos .producto .descripcion{
     width: 95%;
     font-size: 1rem;
     font-weight: lighter;
@@ -48,16 +48,16 @@ main h3{
     padding-left: 2px;
     color: rgba(117, 113, 113, 0.905);
 }
-.producto .precio{
+.listadoProductos .productos .producto .precio{
     width: 95%;
     font-size: 1.1rem;
     font-weight: bolder;
     text-align: center;
 }
-.producto .agregar{
+.listadoProductos .productos .producto .agregar{
     text-decoration: none;
 }
-.agregarCarrito{
+.listadoProductos .productos .producto .agregarCarrito{
     width: 130px;
     font-size: 1.1rem;
     color: white;
@@ -67,11 +67,11 @@ main h3{
     border-radius: 8%;
     margin: 2px;
 }
-.producto .compra{
+.listadoProductos .productos .producto .compra{
     width: 40%;
     text-decoration: none;
 }
-.comprar{
+.listadoProductos .productos .producto .compra .comprar{
     width: 65px;
     font-size: 1.1rem;
     color: white;
@@ -86,7 +86,7 @@ main h3{
     main{
         margin-top: 0;
     }
-    .producto{
+    .listadoProductos .productos .producto{
         width: 203.4px;
         height: 340px;
     }
