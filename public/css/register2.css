@@ -9,13 +9,18 @@
 .form-register{
     display: none;
 }
-
-.container{
+.container-create-edit-product{
+    margin-top: 107px;
+}
+.container-register{
     margin-top: 107px;
 }
 
 @media (min-width: 460px){
-    .container{
+    .container-create-edit-product{
+        margin-top: 25px;
+    }
+    .container-register{
         margin-top: 25px;
     }
 }
