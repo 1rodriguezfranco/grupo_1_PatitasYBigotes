@@ -49,31 +49,34 @@
         text-decoration:line-through;
         color: rgba(0, 0, 0, 0.429);
     }
-    .infoProduct .article .section .preview button{
-        margin: 2.5px 0px;
+    .infoProduct .article .section .preview .buttons{
+        width: 100%;
     }
-    .infoProduct .article .section .preview .buttons .agregarCarrito{
+    .infoProduct .article .section .preview .buttons .agregarAlCarrito{
         font-size: 1rem;
         padding: 7px 15px;
+        width: 80%;
         background-color: whitesmoke;
         border: solid 1px rgb(37, 89, 157);
         border-radius: 50px;
         cursor: pointer;
         color: rgb(37, 89, 157);
+        margin: 2.5px 0px;
     }
     .infoProduct .article .section .preview .buttons{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .infoProduct .article .section .preview .buttons .comprar{
+    .infoProduct .article .section .preview .buttons .comprarAhora{
         font-size: 1rem;
         padding: 7px 15px;
         background-color: rgb(16, 114, 16);
         border: solid 1px rgb(13, 78, 13);
         border-radius: 50px;
         cursor: pointer;
-        color: white
+        color: white;
+        margin: 2.5px 0px;
     }
     .infoProduct .article .section .edit-delete{
         display: flex;
@@ -151,10 +154,13 @@
     .infoProduct .article .detalleTablet .detalleProductoAmpliado .detalleAmplio{
         font-size: 1.1rem;
     }
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons{
+        width: 100%;
+    }
     .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons button{
         margin: 2.5px 0px;
     }
-    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons .agregarCarrito{
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons .agregarAlCarrito{
         font-size: 1rem;
         padding: 7px 15px;
         background-color: whitesmoke;
@@ -168,7 +174,7 @@
         flex-wrap: wrap;
         justify-content: end;
     }
-    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons .comprar{
+    .infoProduct .article .detalleTablet .detalleProductoAmpliado .buttons .comprarAhora{
         font-size: 1rem;
         padding: 7px 15px;
         background-color: rgb(16, 114, 16);
@@ -202,4 +208,8 @@
         color: white;
         margin: 2px;
     }
+}
+
+@media (min-width: 769px){
+    
 }
