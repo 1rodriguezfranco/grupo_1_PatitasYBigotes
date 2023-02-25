@@ -1,77 +1,61 @@
-const fs = require('fs');
 const path = require('path');
-
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-//const adminRoutes = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); //Cambiar el const si es necesario de la linea de arriba.
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const { validationResult } = require('express-validator');
+const Product = require(path.join(__dirname, '../models/Products.js'));
 
 const controller = {
 
-    // CREAR PRODUCTO 
     create: (req, res) => {
          return res.render("createProduct");
     },
 
-	// CREAR PRODUCTO / STORE
 	store: (req, res) => {
-		const products = getProductList(productsFilePath);
-		const product = {
-			id: products.length > 0 ? products[products.length -1].id + 1 : 1,
-			name: req.body.name,
-			description: req.body.description,
-			image: req.file?.filename ? req.file.filename : "default-image.png",
-			mascota: req.body.mascota,
-            categoria: req.body.categoria,
-            price: Number(req.body.price),
-            discount: Number(req.body.discount),
-			finalPrice: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
-		}
-		products.push(product);
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
-
+		let resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0){
+            return res.render('createProduct', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+        	})
+		} else{
+			let productImage = "defaultProduct.jpg";
+            if(req.file){
+                productImage = req.file.filename;
+            }
+            let productToCreate = {
+                ...req.body,
+                product_image: productImage,
+				finalPrice: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
+            }
+			Product.create(productToCreate)
+		};
 		return res.redirect("/admin/createproduct");
 	},
-	// Update - Form to edit
+
 	edit: (req, res) => {
 		const id = req.params.id;
-		const product = products.find(product => product.id == id);
+		const product = Product.findByPk(id);
 		return res.render("editProduct", { product });
 	},
-	// Update - Method to update
+
 	update: (req, res) => {
-		const id = req.params.id;
 		
+		const id = req.params.id;
 		const product = {
 			id,
 			...req.body,
-			image: req.file?.filename ? req.file.filename : "default-image.png"
+			product_image: req.file?.filename ? req.file.filename : "defaultProduct.jpg",
+			finalPrice: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
 		}
-		guardarProducto(product)
-
-		return res.redirect("/");
+		let resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0){
+            return res.render("editProduct", {
+				product:product,
+                errors: resultValidation.mapped(),
+            })
+        }else{
+			Product.edit(product)
+		}
+		return res.redirect("/productList");
 	}
 };
-
-//FUNCIONES
-
-function getProductList(path) {
-	return JSON.parse(fs.readFileSync(path, 'utf-8'));
-}
-
-function guardarProducto(productToStore) {
-	const products = getProductList(productsFilePath);
-
-	const productList = products.map(prod => {
-		if(prod.id == productToStore.id) {
-			return productToStore
-		}
-		return prod;
-	});
-
-	fs.writeFileSync(productsFilePath, JSON.stringify(productList, null, 2)); 
-}
 
 module.exports = controller;

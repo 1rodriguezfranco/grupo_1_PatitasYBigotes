@@ -9,15 +9,33 @@
                 <a href="/"><img src="/images/logo.jpg" alt="Logo de Patitas y Bigotes"></a>
             </div>
 
-            <nav class="login-navbar">
-                <a href="#"><i class="fa-solid fa-user"></i></a>
-            </nav>
-            <nav>
-                <ul class="login-navbar-tablet">
-                    <li class="register"><a href="/auth/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
-                    <li class="login"><a href="/auth/login">Ingresa <i class="fas fa-sign-in-alt"></i></a></li>
-                </ul>
-            </nav>
+            <div class="navbar-celphone">
+                <% if(locals.isLogged) { %>
+                    <nav class="user-logged-navbar">
+                        <a href="/auth/profile"><img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="" class="profile-avatar"></a>
+                    </nav>
+                <% } else { %>
+                    <nav class="login-navbar">
+                        <a href="/auth/login"><i class="fa-solid fa-right-to-bracket"></i></a>
+                        <a href="/auth/register"><i class="fa-regular fa-id-card"></i></a>
+                    </nav>
+                <% } %>
+            </div>
+
+            <div class="navbar-tablet">
+                <% if(locals.isLogged) { %>
+                    <nav class="user-logged-navbar-tablet">
+                        <a href="/auth/profile"><img src="/images/avatars/<%= locals.userLogged.avatar %>" alt="" class="profile-avatar"></a>
+                    </nav>
+                <% } else { %>
+                    <nav>
+                        <ul class="login-navbar-tablet">
+                            <li class="register"><a href="/auth/register">Crea tu cuenta <i class="fa-solid fa-user"></i></a></li>
+                            <li class="login"><a href="/auth/login">Ingresa <i class="fas fa-sign-in-alt"></i></a></li>
+                        </ul>
+                    </nav>
+                <% } %>
+            </div>
 
             <nav class="cart">
                 <a href="/carrito"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>

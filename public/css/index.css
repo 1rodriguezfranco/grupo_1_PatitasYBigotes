@@ -29,7 +29,7 @@
 
 
 .marcasDestacadas{
-    padding: 8px 4px;
+    padding: 35px 4px 8px 4px;
 }
 .marcasDestacadas h3{
     font-size: 1.6rem;
@@ -55,7 +55,7 @@
 
 
 .productosPreferidos{
-    padding: 8px 4px;
+    padding: 8px 4px 35px 4px;
 }
 .productosPreferidos h3{
     font-size: 1.6rem;

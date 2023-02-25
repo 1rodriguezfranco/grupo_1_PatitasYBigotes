@@ -1,15 +1,6 @@
-
-/* LOGIN */
-body {
-    font-family: 'Mouse Memoirs', sans-serif;
-    background-color: whitesmoke;
-}
-main {
-    margin-top: 101.5px;
-}
 .main-section-login{
     width: 100%;
-    background-color: whitesmoke;
+    padding: 35px 0px;
 }
 .main-title-login h2 {
     font-size: 19px;

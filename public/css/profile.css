@@ -1,0 +1,28 @@
+.userProfile{
+    padding: 35px;
+}
+.userProfile .top-userProfile img{
+    width: 35vw;
+    border: solid 3px rgb(37, 89, 157);;
+    border-radius: 50%;
+}
+.userProfile .top-userProfile p{
+    font-size: 1.4rem;
+}
+.userProfile .top-userProfile button{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.userProfile .top-userProfile button a{
+    text-decoration: none;
+}
+.userProfile form button{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media (min-width: 460px){
+    .userProfile .top-userProfile img{
+        width: 161px;
+    }
+}

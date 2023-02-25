@@ -10,13 +10,11 @@
 
         <main>
 
-            <h3 class="titleProductList">Productos</h3>
-
             <section class="listadoProductos">
                 <% for(let product of products) { %>
                     <article class="productos">
                         <div class="producto"> 
-                            <a href="/productdetails/<%= product.id %>" class="imagen"><img src="images/<%= product.image %>"></a>
+                            <a href="/productdetails/<%= product.id %>" class="imagen"><img src="images/products/<%= product.product_image %>"></a>
                             <p class="nombre"><%= product.name %></p>
                             <p class="descripcion"><%= product.description %></p>
                             <p class="precio">$ <%= product.finalPrice %></p>

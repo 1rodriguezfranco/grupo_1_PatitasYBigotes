@@ -47,8 +47,18 @@ header{
 .logo img{
     width: 75px;
 }
-.login-navbar-tablet{
+.navbar-tablet{
     display: none;
+}
+header .fix-header .top-header .navbar-celphone .user-logged-navbar a img{
+    width: 2.5rem;
+    border: solid 1px rgb(37, 89, 157);
+    border-radius: 50%;
+}
+header .fix-header .top-header .navbar-tablet .user-logged-navbar-tablet a img{
+    width: 2.5rem;
+    border: solid 1px rgb(37, 89, 157);
+    border-radius: 50%;
 }
 .login-navbar i{
     font-size: 1.8rem;
@@ -111,9 +121,53 @@ header .site-navbar{
 
 
 footer{
-    padding: 8px 4px;
-    background-color: #8ECAE6;
+    padding: 15px 20px;
+    background-color: rgb(250, 250, 250);
+    border: solid 1px rgba(128, 128, 128, 0.315);
 }
+footer .footer-article{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+footer .footer-article div{
+    padding-bottom: 10px;
+}
+footer .footer-article div p{
+    font-size: 1rem;
+    font-style: italic;
+    color: rgb(37, 89, 157);
+}
+footer .footer-article div article{
+    padding-left: 12px;
+}
+footer .footer-article div article p{
+    font-size: 1rem;
+    font-style: normal;
+    color: black;
+}
+footer .footer-article div article p a{
+    text-decoration: none;
+    color: black;
+}
+footer .footer-article a{
+    align-self: center;
+}
+footer .footer-article a img{
+    width: 90px;
+}
+footer .redesSociales{
+    display: flex;
+    justify-content: center;
+}
+footer .redesSociales a{
+    padding: 0px 10px;
+}
+footer .redesSociales a i{
+    color: rgb(37, 89, 157);
+    font-size: 1.3rem;
+}
+/*
 .footer-article{
     display: flex;
     flex-wrap: wrap;
@@ -165,7 +219,7 @@ footer .redesSociales i{
     color: rgb(37, 89, 157);
     font-size: 1.4rem;
 }
-
+*/
 
 
 @media (min-width: 460px){
@@ -183,12 +237,10 @@ footer .redesSociales i{
     .burger-menu i{
         display: none;
     }
-    .login-navbar{
-        display: none;
-    }
-    .login-navbar-tablet{
+    .navbar-tablet{
         display: block;
     }
+    
     header .site-navbar{
         display: block;
         display: flex;
@@ -210,11 +262,16 @@ footer .redesSociales i{
     header .fix-header .center-header .form .input{
         width: 300px;
     }
+    .navbar-celphone{
+        display: none;
+    }
 
+    /*
     .footer-article .ref-logo{
         width: 113px;
         height: 101.7px;
     }
+    */
 }
 
 @media (min-width: 769px){
@@ -225,6 +282,16 @@ footer .redesSociales i{
         position: relative;
         top: 5px;
         right: 175px;
+    }
+    header .fix-header .top-header .navbar-tablet .user-logged-navbar-tablet a img{
+        position: relative;
+        top: 10px;
+        left: 105px;
+        transition: all 0.5s;
+    }
+    header .fix-header .top-header .navbar-tablet .user-logged-navbar-tablet a img:hover{
+        width: 3.3rem;
+        border: solid 2px rgb(255, 195, 0, 0.9);
     }
     header .top-header .login-navbar-tablet li a{
         position: relative;
@@ -269,7 +336,7 @@ footer .redesSociales i{
     header .fix-header .center-header .form{
         position: relative;
         bottom: 40px;
-        right: 80px;
+        right: 60px;
     }
     header .site-navbar{
         margin-top: 80px;
@@ -288,7 +355,24 @@ footer .redesSociales i{
     header .site-navbar li:hover i{
         color: rgb(255, 195, 0, 0.9);
     }
+    footer .footer-article{
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    footer .footer-article .nosotros .article-nosotros p{
+        transition: all 0.5s;
+    }
+    footer .footer-article .nosotros .article-nosotros p:hover{
+        text-decoration: underline;
+    }
+    footer .redesSociales i{
+        transition: all 0.3s;
+    }
+    footer .redesSociales a i:hover{
+        font-size: 1.5rem;
+    }
 
+    /*
     footer .footer-article div:hover article{
         display: block;
     }
@@ -307,4 +391,5 @@ footer .redesSociales i{
     footer .redesSociales i:hover{
         font-size: 1.8rem;
     }
+    */
 }

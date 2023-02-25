@@ -1,46 +1,54 @@
 [
   {
-    "id": 2,
-    "name": "Balanceado Excellent Purina 7.5kg",
-    "description": "Alimento para gato adulto",
-    "image": "product_image-1675954461646-572391113.jpg",
-    "mascota": "gato",
-    "categoria": "alimentos",
-    "price": 8500,
-    "discount": 20,
-    "finalPrice": 6800
-  },
-  {
-    "id": 3,
-    "name": "Balanceado Zootec TropMix Pericos",
-    "description": "Alimento para pericos 1kg",
-    "image": "product_image-1675954500424-266525827.jpg",
-    "mascota": "aves",
-    "categoria": "alimentos",
-    "price": 2500,
-    "discount": 0,
-    "finalPrice": 2500
-  },
-  {
-    "id": 4,
-    "name": "Heno Puppis 500g",
-    "description": "Alimento para conejos",
-    "image": "product_image-1675954540501-856150869.jpg",
-    "mascota": "roedor",
-    "categoria": "alimentos",
-    "price": 3000,
-    "discount": 5,
-    "finalPrice": 2850
-  },
-  {
-    "id": 5,
-    "name": "Alimento Excellent Pollo y Arroz - 15kg",
-    "description": "Alimento para perro adulto (+7)",
-    "image": "product_image-1676220115325-437188477.jpg",
+    "id": "1",
+    "name": "Alimento Excellent Pollo y Arroz ",
+    "shortDescription": "",
+    "longDescription": "",
     "mascota": "perro",
     "categoria": "alimentos",
-    "price": 10895,
-    "discount": 15,
-    "finalPrice": 9260.75
+    "marca": "purina",
+    "price": "12000",
+    "discount": "10",
+    "product_image": "product_image-1677351921229-198579949.jpg",
+    "finalPrice": 10800
+  },
+  {
+    "id": "2",
+    "name": "Alimento Excellent Pollo y Arroz",
+    "shortDescription": "Alimento para perros 7kg",
+    "longDescription": "Esta es la descripción amplia",
+    "mascota": "perro",
+    "categoria": "alimentos",
+    "marca": "purina",
+    "price": "12000",
+    "discount": "10",
+    "product_image": "product_image-1677351726784-826076731.jpg",
+    "finalPrice": 10800
+  },
+  {
+    "id": "3",
+    "name": "Alimento bagaio ",
+    "shortDescription": "Gordito Tomi",
+    "longDescription": "Come lomito",
+    "mascota": "",
+    "categoria": "",
+    "marca": "",
+    "price": "50000",
+    "discount": "10",
+    "product_image": "defaultProduct.jpg",
+    "finalPrice": 45000
+  },
+  {
+    "id": "31",
+    "name": "Rascador Kong Incline",
+    "shortDescription": "Rascador para gatos",
+    "longDescription": "Que tu michi disfrute mucho de este hermoso juguete desestresante",
+    "mascota": "gato",
+    "categoria": "accesorios",
+    "marca": "royalCanin",
+    "price": "6500",
+    "discount": "0",
+    "product_image": "product_image-1677358490905-426231940.jpg",
+    "finalPrice": 6500
   }
 ]

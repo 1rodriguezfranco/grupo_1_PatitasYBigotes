@@ -7,7 +7,7 @@ main .titleProductList{
     padding: 2px 4px;
 }
 .listadoProductos{
-    padding: 8px 4px;
+    padding: 35px 4px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

@@ -5,63 +5,108 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <body>
 
-    <%- include("./partials/header") %>
+  <%- include("./partials/header") %>
 
-<!-- EDITAR PRODUCTO -->
-<div class="container-create-edit-product">
+  <% if(locals.product) { %>
+  <div class="container-create-edit-product">
+
     <div class="row display-flex justify-content-center mt-2 mb-5">
-        <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
-            <h1 class="mb-3 text-center">Estas editando el producto: <i><%= product.name %></i></h1>
-            <form action="/admin/editproduct/<%= product.id %>?_method=PUT" method="post">
-                <div class="form-group">
-                  <label for="name">Nombre del Producto</label>
-                  <input type="text" class="form-control" id="name" name="name" value="<%= product.name %>">
-                </div>
-                <div class="form-group">
-                    <label for="description">Descripcion</label>
-                    <textarea class="form-control" id="description" name="description"><%= product.description %></textarea>
-                  </div>
-                <div class="form-group">
-                    <label for="file" class="form-label">Imagen de producto</label>
-                    <input class="form-control" type="file" id="file" name="product_image">
-                </div>
-                <div class="form-group">
-                  <label for="mascota">Seleccione la mascota</label>
-                  <select class="form-control" id="mascota" name="mascota">
-                    <option value="">Select</option>
-                    <option value="perro">Perro</option>
-                    <option value="gato">Gato</option>
-                    <option value="roedor">Roedor</option>
-                    <option value="aves">Aves</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                    <label for="categoria">Seleccione la categoria</label>
-                    <select class="form-control" id="categoria" name="categoria">
-                      <option value="">Select</option>
-                      <option value="alimentos">Alimentos</option>
-                      <option value="accesorios">Accesorios</option>
-                      <option value="estetica">Estética e higiene</option>
-                      <option value="salud">Salud</option>
-                    </select>
-                  </div>
-                <div class="form-group">
-                    <label for="price">Precio del producto</label>
-                    <input type="text" class="form-control" id="price" name="price" placeholder="$" value="<%= product.price %>">
-                </div>
-                <div class="form-group">
-                    <label for="discount">Descuento aplicado (%)</label>
-                    <input type=text class="form-control" id="discount" name="discount" placeholder="%" value="<%= product.discount %>">
-                </div>
-            <div class="container my-3">
-                <div class="col-md-12 text-center">
-                    <button type="reset" class="btn btn-primary btn-lg">Reset</button>
-                    <button type="submit" class="btn btn-secondary btn-lg">Guardar</button>
-                </div>
+
+      <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
+
+        <h1 class="mb-3 text-center">Estas editando el producto: <i><%= product.name %></i></h1>
+
+          <form action="/admin/editproduct/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+              <label for="name">Nombre del Producto</label>
+              <input type="text" id="name" name="name" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value= "<%= product.name %>">
+              <% if (locals.errors && errors.name) { %>
+                <p style="color: red"><%= errors.name.msg %></p>
+              <% } %>
             </div>
-        </div>
+
+            <div class="form-group">
+              <label for="description">Descripcion breve</label>
+              <textarea class="form-control" id="shortDescription" name="shortDescription"><%= locals.product && product.shortDescription ? product.shortDescription : null %></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Descripcion amplia</label>
+              <textarea class="form-control" id="longDescription" name="longDescription"><%= locals.product && product.longDescription ? product.longDescription : null %></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="product_image" class="form-label">Imagen de producto</label>
+                <input class="form-control" type="file" id="product_image" name="product_image">
+            </div>
+
+            <div class="form-group">
+              <label for="mascota">Seleccione la mascota</label>
+              <select class="form-control" id="mascota" name="mascota">
+                <option value="">Select</option>
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="roedor">Roedor</option>
+                <option value="aves">Aves</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="categoria">Seleccione la categoria</label>
+              <select class="form-control" id="categoria" name="categoria">
+                <option value="">Select</option>
+                <option value="alimentos">Alimentos</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="estetica">Estética e higiene</option>
+                <option value="salud">Salud</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="marca">Seleccione la marca</label>
+              <select class="form-control" id="marca" name="marca">
+                <option value="">Select</option>
+                <option value="royalCanin">Royal Canin</option>
+                <option value="vitalCan">Vital Can</option>
+                <option value="purina">Purina</option>
+                <option value="oldPrice">Old Price</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="price">Precio del producto</label>
+              <input type="text" id="price" name="price" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" value= "<%= product.price %>">
+              <% if (locals.errors && errors.price) { %>
+                <p style="color: red"><%= errors.price.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="form-group">
+              <label for="discount">Descuento aplicado (%)</label>
+              <input type=text id="discount" name="discount" class="form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %>" value= "<%= product.discount %>">
+              <% if (locals.errors && errors.discount) { %>
+                <p style="color: red"><%= errors.discount.msg %></p>
+              <% } %>
+            </div>
+
+            <div class="container my-3">
+              <div class="col-md-12 text-center">
+                <button type="reset" class="btn btn-primary btn-lg">Reset</button>
+                <button type="submit" class="btn btn-secondary btn-lg">Guardar</button>
+              </div>
+            </div>
+          
+          </form>
+      
+      </div>
+
     </div>
-</div>
-<%- include("./partials/footer") %>
+
+  </div>
+  <% } %>
+  <%- include("./partials/footer") %>
+
 </body>
+
 </html>

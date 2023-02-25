@@ -7,54 +7,65 @@
 
     <%- include("./partials/header") %>
 
-<!-- PRODUCTO -->
-<main class="infoProduct">
-    <article class="article">
+    <main class="infoProduct">
 
-        <section class="section">
-            <h2><%= product.name %></h2>
-            <div class="preview">
-                <img src="/images/<%= product.image %>" class="producto">
-                <p class="detalle"> <%= product.description %></p>
-                <p class="precioanterior">$ <%= product.price %></p>
-                <p class="precioactual">$ <%= product.finalPrice %></p>
-                <div class="buttons">
-                    <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
-                    <button type="button" class="comprarAhora">Comprar ahora</button>
-                </div>
-            </div>
-            <div class="edit-delete">
-                <!-- VISIBLE PARA ADMINS -->
-                <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
-                <button type="submit" class="eliminar">Eliminar</button>
-            </div>
-        </section>
+        <article class="article">
 
-        <section class="detalleTablet">
-            <div class="detalleProductoAmpliado">
-                <p class="detalleAmplio">Acá va la descripción amplia</p>
-                <div class="buttons">
-                    <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
-                    <button type="button" class="comprarAhora">Comprar ahora</button>
+            <section class="section">
+
+                <h2><%= product.name %></h2>
+
+                <div class="preview">
+                    
+                    <img src="/images/products/<%= product.product_image %>" class="producto">
+                    <p class="detalle"><%= locals.product && product.shortDescription ? product.shortDescription : null %></p>
+                    <p class="precioanterior">$ <%= product.price %></p>
+                    <p class="precioactual">$ <%= product.finalPrice %></p>
+
+                    <div class="buttons">
+                        <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
+                        <button type="button" class="comprarAhora">Comprar ahora</button>
+                    </div>
+
                 </div>
+
                 <div class="edit-delete">
                     <!-- VISIBLE PARA ADMINS -->
                     <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
-                    <form action="/productdetails/<%= product.id %>?_method=DELETE" method="post">
-                        <button type="submit" class="eliminar">Eliminar</button>
-                    </form>
+                    <button type="submit" class="eliminar">Eliminar</button>
                 </div>
-            </div>
-        </section>
-    </article>
-</main>
-<!-- END PRODUCTO -->
 
-<!-- FOOTER -->
+            </section>
+
+            <section class="detalleTablet">
+
+                <div class="detalleProductoAmpliado">
+
+                    <p class="detalleAmplio"><%= locals.product && product.longDescription ? product.longDescription : null %></p>
+
+                    <div class="buttons">
+                        <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
+                        <button type="button" class="comprarAhora">Comprar ahora</button>
+                    </div>
+
+                    <div class="edit-delete">
+                        <!-- VISIBLE PARA ADMINS -->
+                        <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
+                        <form action="/productdetails/<%= product.id %>?_method=DELETE" method="post">
+                            <button type="submit" class="eliminar">Eliminar</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
 
     <%- include("./partials/footer") %>
 
-<!-- END FOOTER -->
 </body>
 </html>
 

@@ -12,7 +12,7 @@ const mainController = {
         const products = getProductList(productsFilePath);
         const id = req.params.id;
 		const product = products.find(product => product.id == id);
-        res.render ("productdetails", {product});
+        res.render ("productDetails", {product});
     },
 
     productList: (req, res) => {
