@@ -6,5 +6,13 @@
     "password": "$2a$10$k.DFwdfJVlNjcGkOYpwggeM2bsJzh75xu5orFZkQ2R.ezdwIF3WgG",
     "confirmPassword": "$2a$10$ibyLakdED78eK0Z8yy6BFetVFGFV9tBoU3bPoObldF0VgwuQ2Yn4y",
     "avatar": "avatar-1676685596953-159904779.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Francisco Duran",
+    "email": "fran89cba@gmail.com",
+    "password": "$2a$10$RRoATI8WoVFrCPO3JIEmheBaPa2LkJ3X3wznWqeTbbfGmrGHTDGYW",
+    "confirmPassword": "$2a$10$rUCcMSczFuYqh7wYakEiK.Ft0IzKJFIc3gLDa3P5BCWtTYuPDicV.",
+    "avatar": "avatar-1677339305202-289880054.HEIC"
   }
 ]

@@ -3,28 +3,17 @@
 
     <%- include("./partials/head") %> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+    
 <body>
 
     <%- include("./partials/header") %>  
-
     <div class="container-register">
         <div class="row display-flex justify-content-center mt-2 mb-5">
             <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
                 <div id="buttons">
                     <h1 class="mb-3 text-center">Registro</h1>
-                <div class="form-group text-center">
-                    <button class="button-register3" type="button">Ingresar con Gmail</button>
                 </div>
-                <div class="form-group mt-1 mb-1 text-center">
-                    <button class="button-register2" type="button">Ingresar con Facebook</button>
-                </div>
-                <div class="form-group mt-1 mb-1 text-center">
-                    <button class="button-register" type="button" onclick="showForm()">Ingresar con usuario y password</button>
-                </div>
-                </div>
-                
-                <form  action="/auth/register" method="post" enctype="multipart/form-data" id="form" class="form-register">
+                <form  action="/auth/register" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                       <label for="name">Nombre y Apellido</label>
                       <input type="text" id="name" name="name" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.name ? oldData.name : null %>">
@@ -59,34 +48,22 @@
                     </div>
                     <div class="container my-3">
                         <div class="col-md-12 text-center">
-                            <button type="reset" class="btn btn-primary btn-lg" onclick="backForm()">Reset</button>
-                            <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            <button type="reset" class="btn btn-secondary btn-lg">Reset</button>
                         </div>
                     </div>
                 </form>
+                <div class="form-group text-center">
+                    <button class="button-register3" type="button">Ingresar con Gmail</button>
+                </div>
+                <div class="form-group mt-1 mb-1 text-center">
+                    <button class="button-register2" type="button">Ingresar con Facebook</button>
+                </div>
             </div>
         </div>
     </div>
-
-    <%- include("./partials/footer") %>
-
-    <script>
-        function showForm() {
-            const element = document.getElementById('form')
-            element.style.display = 'block'
-
-            const element1 = document.getElementById('buttons')
-            element1.style.display = 'none'
-        }
-
-        function backForm() {
-            const element = document.getElementById('form')
-            element.style.display = 'none'
-
-            const element1 = document.getElementById('buttons')
-            element1.style.display = 'block'
-        }
-    </script>
+    
+<%- include("./partials/footer") %>
 
 <body>
 </html>
