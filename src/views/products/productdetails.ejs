@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head") %> 
+    <%- include("../partials/head") %> 
     
 <body>
 
-    <%- include("./partials/header") %>
+    <%- include("../partials/header") %>
 
     <main class="infoProduct">
 
@@ -31,7 +31,7 @@
 
                 <div class="edit-delete">
                     <!-- VISIBLE PARA ADMINS -->
-                    <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
+                    <a href="/products/edit/<%= product.id %>"><button class="editar">Editar</button></a>
                     <button type="submit" class="eliminar">Eliminar</button>
                 </div>
 
@@ -50,8 +50,8 @@
 
                     <div class="edit-delete">
                         <!-- VISIBLE PARA ADMINS -->
-                        <a href="/admin/editproduct/<%= product.id %>"><button class="editar">Editar</button></a>
-                        <form action="/productdetails/<%= product.id %>?_method=DELETE" method="post">
+                        <a href="/products/edit/<%= product.id %>"><button class="editar">Editar</button></a>
+                        <form action="/products/details/<%= product.id %>?_method=DELETE" method="post">
                             <button type="submit" class="eliminar">Eliminar</button>
                         </form>
                     </div>
@@ -64,7 +64,7 @@
 
     </main>
 
-    <%- include("./partials/footer") %>
+    <%- include("../partials/footer") %>
 
 </body>
 </html>

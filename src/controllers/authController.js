@@ -7,18 +7,18 @@ const bcryptjs = require('bcryptjs');
 
 const authController = {
     
-    register: (req, res) => res.render ("register"),
+    register: (req, res) => res.render ("./auth/register"),
 
     store:(req, res)=> {        
         let resultValidation = validationResult(req);
         let userInDB = User.findByField('email', req.body.email);
         if (resultValidation.errors.length > 0){
-            return res.render('register', {
+            return res.render('./auth/register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             })
         } else if(userInDB){
-            return res.render('register', {
+            return res.render('./auth/register', {
                 errors: {
                     email: {
                         msg: 'Este email ya está registrado'
@@ -40,14 +40,14 @@ const authController = {
         }
     },
 
-    register2: (req, res) => res.render ("register2"),
+    register2: (req, res) => res.render ("./auth/register2"),
 
-    login: (req, res) => res.render ("login"),
+    login: (req, res) => res.render ("./auth/login"),
 
     loginProcess: (req, res) => {
         let resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0){
-            return res.render("login", {
+            return res.render("./auth/login", {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             })
@@ -55,7 +55,7 @@ const authController = {
         let userToLogin = User.findByField('email', req.body.email);
         let userToLoginPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
         if (!userToLogin || !userToLoginPassword){
-            res.render("login", {
+            res.render("./auth/login", {
                 errors: {
                     userLogin: {
                         msg: "El usuario o la constraseña no coinciden con un usuario registrado"
@@ -79,11 +79,11 @@ const authController = {
         return res.redirect('/');
     },
 
-    newpassword: (req, res) => res.render ("newpassword"),
-    recoverpassword: (req, res) => res.render ("recoverpassword"), 
+    newpassword: (req, res) => res.render ("./auth/newpassword"),
+    recoverpassword: (req, res) => res.render ("./auth/recoverpassword"), 
 
     profile: (req, res) => { res.render
-        ('profile', { user : req.session.userLogged})
+        ('./auth/profile', { user : req.session.userLogged})
     }
 }
 

@@ -12,13 +12,20 @@ const productsController = require("../controllers/productsController");
 
 
 /*** CREATE ONE PRODUCT ***/
-router.get('/createproduct', productsController.create);
-router.post('/createproduct', upload.single("product_image"), validationsProductCreate, productsController.store);
+router.get('/create', productsController.create);
+router.post('/create', upload.single("product_image"), validationsProductCreate, productsController.store);
 
 
 /*** EDIT ONE PRODUCT ***/
-router.get('/editproduct/:id', productsController.edit);
-router.put('/editproduct/:id', upload.single("product_image"), validationsProductEdit, productsController.update);
+router.get('/edit/:id', productsController.edit);
+router.put('/edit/:id', upload.single("product_image"), validationsProductEdit, productsController.update);
 
+
+/*** DELETE ONE PRODUCT***/ 
+router.get("/details/:id", productsController.details);
+router.delete('/details/:id', productsController.destroy); 
+
+
+router.get("/list", productsController.list)
 
 module.exports = router;

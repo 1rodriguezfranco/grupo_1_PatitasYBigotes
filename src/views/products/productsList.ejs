@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include("./partials/head") %> 
+    <%- include("../partials/head") %> 
     
 <body>
     <body>
 
-        <%- include("./partials/header") %>
+        <%- include("../partials/header") %>
 
         <main>
 
@@ -14,7 +14,7 @@
                 <% for(let product of products) { %>
                     <article class="productos">
                         <div class="producto"> 
-                            <a href="/productdetails/<%= product.id %>" class="imagen"><img src="images/products/<%= product.product_image %>"></a>
+                            <a href="/products/details/<%= product.id %>" class="imagen"><img src="/images/products/<%= product.product_image %>"></a>
                             <p class="nombre"><%= product.name %></p>
                             <p class="descripcion"><%= product.description %></p>
                             <p class="precio">$ <%= product.finalPrice %></p>
@@ -27,7 +27,7 @@
             
         </main>
 
-        <%- include("./partials/footer") %>
+        <%- include("../partials/footer") %>
 
     </body>
 </body>

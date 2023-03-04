@@ -12,24 +12,24 @@ const authUserLogged = require(path.join(__dirname, '../middlewares/auths/userLo
 /* Requiriendo middlewater de Usuario NO Loggeado*/
 const authUserNotLogged = require(path.join(__dirname, '../middlewares/auths/userNotLogged'));
 /* Controller Require */
-const authRouter = require("../controllers/authController");
+const authController = require("../controllers/authController");
 
 
 /*** Register ***/
-router.get("/register", authUserLogged, authRouter.register);
-router.post("/register", upload.single("avatar"), validationsRegister, authRouter.store);
+router.get("/register", authUserLogged, authController.register);
+router.post("/register", upload.single("avatar"), validationsRegister, authController.store);
 // router.get("/register2", authRouter.register2);
 
 /* Login */
-router.get("/login", authUserLogged, authRouter.login);
-router.post("/login", validationsLogin, authRouter.loginProcess);
+router.get("/login", authUserLogged, authController.login);
+router.post("/login", validationsLogin, authController.loginProcess);
 
 /* Perfil */
-router.get("/profile", authUserNotLogged, authRouter.profile);
-router.post("/profile", authUserNotLogged, authRouter.logout);
+router.get("/profile", authUserNotLogged, authController.profile);
+router.post("/profile", authUserNotLogged, authController.logout);
 
-router.get("/newpassword", authRouter.newpassword);
-router.get("/recoverpassword", authRouter.recoverpassword);
+router.get("/newpassword", authController.newpassword);
+router.get("/recoverpassword", authController.recoverpassword);
 
 
 module.exports = router;

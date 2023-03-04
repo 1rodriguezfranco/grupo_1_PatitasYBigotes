@@ -59,9 +59,10 @@ const Products = {
 
     delete: function(id){
         let allProducts = this.findAll();
-        let finalProducts = allProducts.filter(product => product.id !== id)
+        let finalProducts = allProducts.filter(product => product.id !== id);
         fs.writeFileSync(this.productsFile, JSON.stringify(finalProducts, null, 2));
     }
+    
 };
 
 module.exports = Products;

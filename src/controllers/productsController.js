@@ -5,13 +5,13 @@ const Product = require(path.join(__dirname, '../models/Products.js'));
 const controller = {
 
     create: (req, res) => {
-         return res.render("createProduct");
+         return res.render("./products/createProduct");
     },
 
 	store: (req, res) => {
 		let resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0){
-            return res.render('createProduct', {
+            return res.render('./products/createProduct', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
         	})
@@ -27,17 +27,16 @@ const controller = {
             }
 			Product.create(productToCreate)
 		};
-		return res.redirect("/admin/createproduct");
+		return res.redirect("/products/create");
 	},
 
 	edit: (req, res) => {
 		const id = req.params.id;
 		const product = Product.findByPk(id);
-		return res.render("editProduct", { product });
+		return res.render("./products/editProduct", { product });
 	},
 
 	update: (req, res) => {
-		
 		const id = req.params.id;
 		const product = {
 			id,
@@ -47,7 +46,7 @@ const controller = {
 		}
 		let resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0){
-            return res.render("editProduct", {
+            return res.render("./products/editProduct", {
 				product:product,
                 errors: resultValidation.mapped(),
             })
@@ -55,7 +54,25 @@ const controller = {
 			Product.edit(product)
 		}
 		return res.redirect("/productList");
+	},
+
+	details: (req, res) => {
+		const id = req.params.id;
+		const product = Product.findByPk(id);
+		return res.render("./products/productdetails", { product });
+	},
+
+	destroy: (req, res) =>{
+		let id = req.params.id;
+		Product.delete(id);
+		res.redirect('/products/list');
+	},
+
+	list: (req, res) => {
+		let allProducts = Product.findAll();
+		res.render("./products/productsList", {products: allProducts})
 	}
+
 };
 
 module.exports = controller;
