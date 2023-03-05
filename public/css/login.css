@@ -171,7 +171,7 @@ h2 {
     background-color: whitesmoke;
 }
 .top-main-recover{
-    margin-top: 105px;
+    padding: 55px;
 }
 .title-recover {
     letter-spacing: 3px;
@@ -366,7 +366,9 @@ h2 {
 
 
    /* Recover Password */
-
+   .top-main-recover{
+    padding: 70px;
+    }
    .title-recover {
     font-size: 23px;
    }

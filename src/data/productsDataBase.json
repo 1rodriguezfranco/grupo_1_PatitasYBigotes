@@ -26,19 +26,6 @@
     "finalPrice": 10800
   },
   {
-    "id": "3",
-    "name": "Alimento bagaio ",
-    "shortDescription": "Gordito Tomi",
-    "longDescription": "Come lomito",
-    "mascota": "",
-    "categoria": "",
-    "marca": "",
-    "price": "50000",
-    "discount": "10",
-    "product_image": "defaultProduct.jpg",
-    "finalPrice": 45000
-  },
-  {
     "id": "31",
     "name": "Rascador Kong Incline",
     "shortDescription": "Rascador para gatos",
