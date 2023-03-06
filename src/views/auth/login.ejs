@@ -21,20 +21,20 @@
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="E-mail" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.email ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
-                            <p style="color:red"><%= errors.email.msg %></p>
+                            <p class="error-login"><%= errors.email.msg %></p>
                         <% } %>
                     </p>
                     <p class="password">
                         <label for="password"></label>
                         <input type="password" name="password" id="password" pattern=".{8,15}" placeholder="Contraseña" alt="strongPass" alt="alphanumeric" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
                         <% if (locals.errors && errors.password) { %>
-                            <p style="color:red"><%= errors.password.msg %></p>
+                            <p class="error-login"><%= errors.password.msg %></p>
                         <% } %>
                     </p>
                         <% if (locals.errors && errors.userLogin) { %>
-                        <p style="color:red"><%= errors.userLogin.msg %></p>
+                        <p class="error-login"><%= errors.userLogin.msg %></p>
                         <% } %>
-                    <p class="passwordbutton">
+                    <p class="showpassword">
                         <button id="toggle-password" type="button" aria-label="Muestra la contraseña como texto plano. Advertencia: esto hará que se muestre su contraseña en la pantalla.">Mostrar contraseña</button>
                     </p>   
                 </div>

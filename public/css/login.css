@@ -1,6 +1,6 @@
 .main-section-login{
     width: 100%;
-    padding: 35px 0px;
+    padding: 20px 0px;
 }
 .main-title-login h2 {
     font-size: 19px;
@@ -42,30 +42,40 @@
     width: 190px;
     padding: 0px 6px;
 }
-.passwordbutton {
+.error-login {
+    color: red;
+    padding-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showpassword {
     letter-spacing: 0.4px;
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
-.passwordbutton button  {
+.showpassword button  {
     border-radius: 5px;
     font-size: 14px;
     width: 135px;
     height: 20px;
+    color: rgb(0,0,0);
+    opacity: 80%;
 }
 .recorder {
     margin-top: 8px;
-    display: flex;
-    margin-bottom: 11px;
+    margin-bottom: 11px;  
     position: relative;
-    right: 40px;
+    right: 45px; 
 }
-.recorder input, .recorder label {
+.recorder input.recorder label {
+    font-size: 10px;
+}
+.recorder label {
     padding: 0px 3px;
-    font-size: 14px;
 }
-.create-account, .recover-password, .forgot-password, .enter-buttom-login, .recorder {
+.create-account, .recover-password, .forgot-password, .enter-buttom-login, .recorder  {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,22 +90,19 @@
     color: rgb(31, 97, 141 );
     text-decoration: none;
 }
-.enter-buttom-login {
-    margin-bottom: 15px;
-}
-.enter-buttom-login i{
-    font-size: 14.5px;
-}
 .enter-buttom-login button {
+    margin-bottom: 15px;
+    font-size: 13.5px;
+    padding: 2.5px;
     background-color: rgb(255, 195, 0);
+    color: rgb(0,0,0);
     opacity: 90%;
     border-radius: 5px;
 }
-.enter-buttom-login a {
-    text-decoration: none;
-    color: black;
-    margin: 0px 7px;
-    font-size: 18px;
+.enter-buttom-login button i{
+    font-size: 12.5px;
+    padding-left: 3.5px;
+    color: #a05818;
 }
 .forgot-password {
     margin-top: 4px;
@@ -121,6 +128,7 @@ h2 {
 }
 .main-password {
     background-color: whitesmoke;
+    padding: 45px;
 }
 .fa-lock, h2, .new-password, .confirm-new-password, .button-change-password{ 
     display: flex;
@@ -240,7 +248,7 @@ h2 {
         font-size: 17.5px;
         width: 210px;
     }
-    .passwordbutton button  {
+    .showpassword button  {
         font-size: 15.5px;
         width: 140px;
         height: 23px;
@@ -255,12 +263,13 @@ h2 {
     .create-account, .recover-password, .forgot-password, .enter-buttom-login, .recorder {
         font-size: 17px;
     }
-    .enter-buttom-login i{
+    .enter-buttom-login button {
+        font-size: 15.5px;
+    }
+    .enter-buttom-login button i{
         font-size: 16px;
     }
-    .enter-buttom-login a {
-        font-size: 20px;
-    }
+  
 
     /* New password */
 
@@ -329,27 +338,29 @@ h2 {
         font-size: 20px;
         width: 255px;
     }
-    .passwordbutton button  {
+    .showpassword button  {
         font-size: 18px;
         width: 160px;
         height: 25px;
     }
-    .create-account, .recover, .forgot-password, .recorder {
+    .create-account, .recover-password, .forgot-password, .enter-buttom-login, .recorder {
         font-size: 21px;
     }
     .create-account p, .create-account a {
         margin-bottom: 3px;
     }
-    .enter-buttom i {
-        font-size: 21px;
+    .enter-buttom-login i {
+        font-size: 18px;
     }
-    .enter-buttom button {
-        font-size: 23px;
+    .enter-buttom-login button {
+        font-size: 18px;
     }
-
+    
 
     /* New Password */
-
+    .main-password {
+        padding: 73px;
+    }
     .main-password h2 {
         font-size: 24px;
     }
@@ -367,7 +378,7 @@ h2 {
 
    /* Recover Password */
    .top-main-recover{
-    padding: 70px;
+    padding: 73px;
     }
    .title-recover {
     font-size: 23px;

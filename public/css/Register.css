@@ -35,12 +35,14 @@
    
 
 }
-input{
+/*input{
     color:rgb(31, 97, 141 );
     padding-left: 3px;
     font-size: 13px;
+
+revisar en vista ejs, ya que al no tener clase definida, afecta a componentes del login
    
-}
+}*/
 .registro2{
     width: 60vw;
     justify-content: center;
@@ -57,10 +59,11 @@ input{
 
 }
 
-form div input{
+/*form div input{ 
     width: 80%;
     
-}
+revisar en vista ejs, ya que al no tener clase definida, afecta a componentes del login
+}*/
 .envios{
     display: flex;
     justify-content: space-around;
