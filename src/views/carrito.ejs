@@ -8,83 +8,72 @@
     <%- include("./partials/header") %>
     
 
-    <div class="contenedor" id="contenedor">
-        <div>
-            <table>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Subtotal</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="informacion">
-                            <img src="/img/148052.webp">
-                            <div>
-                                <p>Alimento Old Prince </p>
-
-                                <br>
-                                <a href="">Remover</a>
-                            </div>
-
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>$5000</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="informacion">
-                            <img src="\img\alimento.webp">
-                            <div>
-                                <p>Alimento Royal Canin</p>
-
-                                <br>
-                                <a href="">Remover</a>
-                            </div>
-
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>$3000</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="informacion">
-                            <img src="\img\alimento2.png">
-                            <div>
-                                <p>Alimento Pro Plan</p>
-
-                                <br>
-                                <a href="">Remover</a>
-                            </div>
-
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"></td>
-                    <td>$8000</td>
-
-                </tr>
-
-            </table>
-            <div class="total">
-                <table>
-                    <tr>
-                        <td>Subtotal</td>
-                        <td>$15000</td>
-                    </tr>
-                    <tr>
-                        <td>Envio</td>
-                        <td>$1000</td>
-                    </tr>
-                    <tr>
-                        <td>Total</td>
-                        <td>$16000</td>
-                    </tr>
-                </table>
+    <div class="cart-container">
+        <h2>Carrito de compras</h2>
+        <div class="cart-items">
+            <!-- Producto 1  -->
+          <div class="cart-row">
+            <div class="cart-item">
+              <img src="/img/148052.webp" alt="Producto 1">
+              <p>Producto 1</p>
+              <p>Descripción del producto 1</p>
             </div>
+            <div class="product-quantity">
+                <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
+                <input class="quantity-input" type="number" min="1" value="1" />
+                <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
+              </div>
+            <div class="cart-item-total">
+              <p>$10</p>
+            </div>
+            <div class="cart-item-remove">
+              <button>Eliminar</button>
+            </div>
+          </div>
+          <!-- Producto 2  -->
+          <div class="cart-row">
+            <div class="cart-item">
+              <img src="/img/alimento.webp" alt="Producto 2">
+              <p>Producto 2</p>
+              <p>Descripción del producto 2</p>
+            </div>
+            <div class="product-quantity">
+                <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
+                <input class="quantity-input" type="number" min="1" value="1" />
+                <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
+              </div>
+            <div class="cart-item-total">
+              <p>$20</p>
+            </div>
+            <div class="cart-item-remove">
+              <button>Eliminar</button>
+            </div>
+          </div>
+          <!-- Producto 3  -->
+          <div class="cart-row">
+            <div class="cart-item">
+              <img src="/img/alimento2.png" alt="Producto 3">
+              <p>Producto 3</p>
+              <p>Descripción del producto 3</p>
+            </div>
+            <div class="product-quantity">
+                <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
+                <input class="quantity-input" type="number" min="1" value="1" />
+                <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
+              </div>
+            <div class="cart-item-total">
+              <p>$30</p>
+            </div>
+            <div class="cart-item-remove">
+              <button>Eliminar</button>
+            </div>
+          </div>
         </div>
-    </div>
+        <div class="cart-total">
+          <h3>Total: $60</h3>
+          <button>Checkout</button>
+        </div>
+      </div>
 
     <%- include("./partials/footer") %>
 
