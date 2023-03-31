@@ -16,35 +16,42 @@
                 </div>
                 <form  action="/auth/register" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                      <label for="name">Nombre y Apellido</label>
-                      <input type="text" id="name" name="name" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.name ? oldData.name : null %>">
-                      <% if (locals.errors && errors.name) { %>
-                        <p><%= errors.name.msg %></p>
+                      <label for="first_name">Nombre</label>
+                      <input type="text" id="name" name="first_name" class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.first_name ? oldData.first_name : null %>">
+                      <% if (locals.errors && errors.first_name) { %>
+                        <p style="color: red"><%= errors.first_name.msg %></p>
                       <% } %>
                     </div>
+                    <div class="form-group">
+                        <label for="last_name">Apellido</label>
+                        <input type="text" id="name" name="last_name" class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.last_name ? oldData.last_name : null %>">
+                        <% if (locals.errors && errors.last_name) { %>
+                          <p style="color: red"><%= errors.last_name.msg %></p>
+                        <% } %>
+                      </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.email ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
-                            <p><%= errors.email.msg %></p>
+                            <p style="color: red"><%= errors.email.msg %></p>
                         <% } %>
                       </div>
                     <div class="form-group">
                         <label for="password">Contraseña</label>
                         <input type="password" id="password" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
                         <% if (locals.errors && errors.password) { %>
-                            <p><%= errors.password.msg %></p>
+                            <p style="color: red"><%= errors.password.msg %></p>
                         <% } %>
                     </div>
                     <div class="form-group">
-                        <label for="password">Confirma tu contraseña</label>
-                        <input type="password" id="password" name="confirmPassword" class="form-control <%= locals.errors && errors.confirmPassword ? 'is-invalid' : null %>">
+                        <label for="confirmPassword">Confirma tu contraseña</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control <%= locals.errors && errors.confirmPassword ? 'is-invalid' : null %>">
                         <% if (locals.errors && errors.confirmPassword) { %>
-                            <p><%= errors.confirmPassword.msg %></p>
+                            <p style="color: red"><%= errors.confirmPassword.msg %></p>
                         <% } %>
                     </div>
                     <div class="form-group">
-                        <label for="image" class="form-label">Carga una foto</label>
+                        <label for="avatar" class="form-label">Carga una foto</label>
                         <input type="file" name="avatar" class="form-control">
                     </div>
                     <div class="container my-3">

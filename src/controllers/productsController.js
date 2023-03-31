@@ -1,76 +1,106 @@
 const path = require('path');
 const { validationResult } = require('express-validator');
-const Product = require(path.join(__dirname, '../models/Products.js'));
+const db = require(path.join(__dirname, "../../database/models"));
 
 const controller = {
-
-    create: (req, res) => {
-         return res.render("./products/createProduct");
+    create: async (req, res) => {
+		let pets = await db.Pet.findAll();
+		let brands = await db.Brand.findAll();
+		let categories = await db.ProductCategory.findAll();
+		return res.render("./products/createProduct", {pets, brands, categories});
     },
 
-	store: (req, res) => {
+	store: async (req, res) => {
+		let pets = await db.Pet.findAll();
+		let brands = await db.Brand.findAll();
+		let categories = await db.ProductCategory.findAll();
 		let resultValidation = validationResult(req);
 		if (resultValidation.errors.length > 0){
             return res.render('./products/createProduct', {
                 errors: resultValidation.mapped(),
-                oldData: req.body
+                oldData: req.body,
+				pets,
+				brands,
+				categories
         	})
 		} else{
 			let productImage = "defaultProduct.jpg";
-            if(req.file){
-                productImage = req.file.filename;
-            }
-            let productToCreate = {
-                ...req.body,
-                product_image: productImage,
-				finalPrice: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
-            }
-			Product.create(productToCreate)
+       	 	if(req.file){
+            	productImage = req.file.filename;
+        	};
+			db.Product.create({
+				...req.body,
+				image: productImage,
+				final_price: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
+			});
+			return res.redirect("/products/create");
 		};
-		return res.redirect("/products/create");
+
 	},
 
-	edit: (req, res) => {
-		const id = req.params.id;
-		const product = Product.findByPk(id);
-		return res.render("./products/editProduct", { product });
+	edit: async (req, res) => {
+		let product = await db.Product.findByPk(req.params.id);
+		let pets = await db.Pet.findAll();
+		let brands = await db.Brand.findAll();
+		let categories = await db.ProductCategory.findAll();
+		return res.render("./products/editProduct", {product, pets, brands, categories});
 	},
 
-	update: (req, res) => {
-		const id = req.params.id;
-		const product = {
-			id,
-			...req.body,
-			product_image: req.file?.filename ? req.file.filename : "defaultProduct.jpg",
-			finalPrice: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
-		}
+	update: async (req, res) => {
+		let productImage = "defaultProduct.jpg";
+       	if(req.file){
+            productImage = req.file.filename;
+        };
+		let product = await db.Product.findByPk(req.params.id);
+		let pets = await db.Pet.findAll();
+		let brands = await db.Brand.findAll();
+		let categories = await db.ProductCategory.findAll();
 		let resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0){
-            return res.render("./products/editProduct", {
-				product:product,
-                errors: resultValidation.mapped(),
-            })
-        }else{
-			Product.edit(product)
-		}
-		return res.redirect("/productList");
+		if (resultValidation.errors.length > 0){
+			return res.render("./products/editProduct", {
+				product,
+				pets,
+				brands,
+				categories,
+				productEdited: req.body,
+				errors: resultValidation.mapped()
+			});
+		} else{
+			db.Product.update(
+				{
+					...req.body,
+					image: productImage,
+					final_price: Number(req.body.price - ((req.body.price * req.body.discount) / 100))
+				},
+				{
+					where: {id: req.params.id}
+				}
+			)
+			.then(()=>{
+				return res.redirect("/products/list");
+			})
+		};
 	},
 
 	details: (req, res) => {
-		const id = req.params.id;
-		const product = Product.findByPk(id);
-		return res.render("./products/productdetails", { product });
+		db.Product.findByPk(req.params.id)
+			.then((product) => {
+				res.render("./products/productdetails", { product});
+			})
 	},
 
 	destroy: (req, res) =>{
-		let id = req.params.id;
-		Product.delete(id);
-		res.redirect('/products/list');
+		db.Product.destroy({
+			where: {id: req.params.id}
+		})
+			.then(() =>{
+				res.redirect('/products/list');
+			})
 	},
 
-	list: (req, res) => {
-		let allProducts = Product.findAll();
-		res.render("./products/productsList", {products: allProducts})
+	list: async (req, res) => {
+		let allProducts = await db.Product.findAll();
+		res.render("./products/productsList", {products: allProducts});
 	}
 
 };

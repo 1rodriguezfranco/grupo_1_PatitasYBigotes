@@ -16,7 +16,7 @@
             <br>
             <p class="userEmail"><%= user.email %></p>
             <br>
-            <button type="button" class="close-session"><a href="#">Editar datos</a></button>
+            <button type="button" class="close-session"><a href="/auth/edit/<%= user.id %>">Editar datos</a></button>
         </section>
         <br>
         <form action="/auth/profile" method="POST">

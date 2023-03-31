@@ -7,6 +7,8 @@ const upload = require(path.join(__dirname, '../middlewares/multers/multerUserAv
 const validationsRegister = require(path.join(__dirname, '../middlewares/validations/validationRegister'));
 /* Requiriendo middleware de Validaciones del Login */
 const validationsLogin = require(path.join(__dirname, '../middlewares/validations/validationLogin'));
+/* Requiriendo middleware de Validaciones del Login */
+const validationsEditUser = require(path.join(__dirname, '../middlewares/validations/validationEditUser'));
 /* Requiriendo middlewater de Usuario Loggeado*/
 const authUserLogged = require(path.join(__dirname, '../middlewares/auths/userLogged'));
 /* Requiriendo middlewater de Usuario NO Loggeado*/
@@ -26,7 +28,11 @@ router.post("/login", validationsLogin, authController.loginProcess);
 
 /* Perfil */
 router.get("/profile", authUserNotLogged, authController.profile);
-router.post("/profile", authUserNotLogged, authController.logout);
+router.post("/profile", authController.logout);
+
+/* Editar */
+router.get("/edit/:id", authUserNotLogged, authController.edit);
+router.put("/edit/:id", upload.single("avatar"), validationsEditUser, authController.update);
 
 router.get("/newpassword", authController.newpassword);
 router.get("/recoverpassword", authController.recoverpassword);
