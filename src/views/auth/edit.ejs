@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head") %> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<body>
+
+    <%- include("../partials/header") %>  
+
+    <div class="container-register">
+        <div class="row display-flex justify-content-center mt-2 mb-5">
+            <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
+                <div id="buttons">
+                    <h1 class="mb-3 text-center">¡Hola <%=user.first_name%>! Edita tus datos:</h1>
+                </div>
+                <form  action="/auth/edit/<%= user.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="first_name">Nombre</label>
+                      <input type="text" id="name" name="first_name" class="form-control <%= locals.errors && errors.first_name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.first_name ? oldData.first_name : user.first_name %>">
+                      <% if (locals.errors && errors.first_name) { %>
+                        <p style="color: red"><%= errors.first_name.msg %></p>
+                      <% } %>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Apellido</label>
+                        <input type="text" id="name" name="last_name" class="form-control <%= locals.errors && errors.last_name ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.last_name ? oldData.last_name : user.last_name %>">
+                        <% if (locals.errors && errors.last_name) { %>
+                          <p style="color: red"><%= errors.last_name.msg %></p>
+                        <% } %>
+                      </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.email ? oldData.email : user.email %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <p style="color: red"><%= errors.email.msg %></p>
+                        <% } %>
+                      </div>
+                    <div class="form-group">
+                        <label for="avatar" class="form-label">Carga una foto</label>
+                        <input type="file" name="avatar" class="form-control">
+                    </div>
+                    <div class="container my-3">
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Editar</button>
+                            <button type="reset" class="btn btn-secondary btn-lg">Borrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("../partials/footer") %>
+
+<body>
+</html>

@@ -12,15 +12,17 @@
         <article class="article">
 
             <section class="section">
+            
+            <% if(locals.product) { %>
 
                 <h2><%= product.name %></h2>
 
                 <div class="preview">
                     
-                    <img src="/images/products/<%= product.product_image %>" class="producto">
-                    <p class="detalle"><%= locals.product && product.shortDescription ? product.shortDescription : null %></p>
+                    <img src="/images/products/<%= product.image %>" class="producto">
+                    <p class="detalle"><%= locals.product && product.short_description ? product.short_description : null %></p>
                     <p class="precioanterior">$ <%= product.price %></p>
-                    <p class="precioactual">$ <%= product.finalPrice %></p>
+                    <p class="precioactual">$ <%= product.final_price %></p>
 
                     <div class="buttons">
                         <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
@@ -32,7 +34,9 @@
                 <div class="edit-delete">
                     <!-- VISIBLE PARA ADMINS -->
                     <a href="/products/edit/<%= product.id %>"><button class="editar">Editar</button></a>
-                    <button type="submit" class="eliminar">Eliminar</button>
+                    <form action="/products/details/<%= product.id %>?_method=DELETE" method="post">
+                        <button type="submit" class="eliminar">Eliminar</button>
+                    </form>
                 </div>
 
             </section>
@@ -41,7 +45,7 @@
 
                 <div class="detalleProductoAmpliado">
 
-                    <p class="detalleAmplio"><%= locals.product && product.longDescription ? product.longDescription : null %></p>
+                    <p class="detalleAmplio"><%= locals.product && product.long_description ? product.long_description : null %></p>
 
                     <div class="buttons">
                         <button type="button" class="agregarAlCarrito">Agregar al carrito</button>
@@ -57,6 +61,8 @@
                     </div>
 
                 </div>
+
+            <% } %>
 
             </section>
 

@@ -7,7 +7,7 @@ const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const app = express();
 const session = require('express-session');
-const userLoggedAPP = require(path.join(__dirname, './middlewares/auths/userLoggedAPP'))
+const userLoggedAPP = require(path.join(__dirname, './middlewares/auths/userLoggedAPP'));
 const PORT = 3000;
 
 // ************ Middlewares - ************

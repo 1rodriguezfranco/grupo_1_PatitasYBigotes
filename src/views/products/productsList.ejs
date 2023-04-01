@@ -14,10 +14,10 @@
                 <% for(let product of products) { %>
                     <article class="productos">
                         <div class="producto"> 
-                            <a href="/products/details/<%= product.id %>" class="imagen"><img src="/images/products/<%= product.product_image %>"></a>
+                            <a href="/products/details/<%= product.id %>" class="imagen"><img src="/images/products/<%= product.image %>"></a>
                             <p class="nombre"><%= product.name %></p>
                             <p class="descripcion"><%= product.description %></p>
-                            <p class="precio">$ <%= product.finalPrice %></p>
+                            <p class="precio">$ <%= product.final_price %></p>
                             <a href="#" class="agregar"><div class="agregarCarrito">Agregar al carrito</div></a>
                             <a href="#" class="compra"><div class="comprar">Comprar</div></a>
                         </div>
