@@ -38,5 +38,13 @@
     "password": "$2a$10$T9GwKI/SGMXBfQQzfuAqdOoyyZ1gPA.XtXJM40rdOw39UTrijVF9i",
     "confirmPassword": "$2a$10$tMq5df7c820u0DpuPF1gaO36VpXDt1Riih73mkRsFbz7B48L/UEi6",
     "avatar": "avatar-1677363898124-447049506.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Agustin Santucho",
+    "email": "agustin.r.santucho@gmail.com",
+    "password": "$2a$10$3kX6WBebJr3HuwVJis4.BuDeIYr/E.PIlXSm2DKMxdLri6PCTXVkW",
+    "confirmPassword": "$2a$10$Xo2swPCPO1PNEL0nvf/8YO3ns271GNChVEB.wcO78cf79bvBUW9va",
+    "avatar": "defaultAvatar.jpg"
   }
 ]

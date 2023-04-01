@@ -20,6 +20,14 @@
     font-size: 1.1rem;
     cursor: pointer;
 }
+.close-session {
+    padding: 3px;
+    margin: 5px;
+}
+.close-session a {
+    text-decoration: none;
+    color: rgb(37, 89, 157);
+}
 
 @media (min-width: 460px){
     .userProfile .top-userProfile img{

@@ -34,11 +34,22 @@
                         <% if (locals.errors && errors.userLogin) { %>
                         <p class="error-login"><%= errors.userLogin.msg %></p>
                         <% } %>
-                    <p class="showpassword">
-                        <button id="toggle-password" type="button" aria-label="Muestra la contraseña como texto plano. Advertencia: esto hará que se muestre su contraseña en la pantalla.">Mostrar contraseña</button>
-                    </p>   
+                        <p class="showpassword">
+                            <input  class="showpassword" type="button" name="showpassword" onclick="mostrar()" value="Mostrar contraseña">
+                        </p>   
                 </div>
-                
+                        <script type="text/javascript">
+                            function mostrar() {
+                                let tipo = document.getElementById("password");
+                        
+                                if(tipo.type == "password") {
+                                    tipo.type = "text";
+                                } else {
+                                    tipo.type = "password"
+                                }
+                            }
+                        </script>
+                                 
                 <div class="recorder">
                     <input type="checkbox" name="rememberUser" value="Recordarme"> 
                     <label for="rememberUser">Recordarme</label>
