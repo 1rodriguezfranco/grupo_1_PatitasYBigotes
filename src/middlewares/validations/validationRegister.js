@@ -1,11 +1,31 @@
 const { body } = require('express-validator');
+const path = require('path');
 
 const validations = [
-    body('first_name').notEmpty().withMessage('El nombre es obligatorio'),
-    body('last_name').notEmpty().withMessage('El apellido es obligatorio'),
-    body('email').notEmpty().withMessage('El email es obligatorio').bail().isEmail().withMessage('Debe ser un formato de correo válido'),
-    body('password').notEmpty().withMessage('La contraseña es obligatoria'),
+    body('first_name').notEmpty().withMessage('El nombre es obligatorio').bail()
+        .isLength({ min:2 }).withMessage('Debe tener al menos 2 caracteres'),
+    body('last_name').notEmpty().withMessage('El apellido es obligatorio').bail()
+        .isLength({ min:2 }).withMessage('Debe tener al menos 2 caracteres'),
+    body('email').notEmpty().withMessage('El email es obligatorio').bail()
+        .isEmail().withMessage('Debe ser un formato de correo válido'),
+    body('password').notEmpty().withMessage('La contraseña es obligatoria').bail()
+        .isLength( {min:8} ).withMessage('Debe tener al menos 8 caracteres').bail(),
     body('confirmPassword').notEmpty().withMessage('Debes confirmar la constraseña'),
+    body('avatar').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];  
+
+        if (!file) {
+            req.body.avatar = "default.jpg";
+            return true;
+        }
+        let fileExtension = path.extname(file.originalname);
+    
+        if(!acceptedExtensions.includes(fileExtension.toLowerCase())) {
+            throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
+        }
+        return true
+    })
 ];
 
 module.exports = validations;

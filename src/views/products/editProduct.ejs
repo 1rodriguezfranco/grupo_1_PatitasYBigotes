@@ -13,7 +13,9 @@
     <div class="row display-flex justify-content-center mt-2 mb-5">
 
       <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
-
+        <div class="errores">
+          <ul></ul>
+        </div>
         <h1 class="mb-3 text-center">Estas editando el producto: <i><%= product.name %></i></h1>
 
           <form action="/products/edit/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
@@ -120,6 +122,9 @@
 
   </div>
   <% } %>
+
+  <script src="/js/validations/editProduct.js"></script>
+
   <%- include("../partials/footer") %>
 
 </body>
