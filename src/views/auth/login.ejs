@@ -9,9 +9,6 @@
 
     <main>
         <section class="main-section-login">
-            <div class="errores">
-                <ul></ul>
-            </div>
             <div class="main-title-login">
                </i><h2>Inicia Sesión</h2>
             </div>
@@ -19,10 +16,10 @@
                 <h4 class="subtitle-login">Ingresa tu e-mail y contraseña!</h4>
             
             <form action="/auth/login" method="POST">
-                <div>
                     <p class="email">
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="E-mail" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.email ? oldData.email : null %>">
+                        <small class="error-msg-login"></small>
                         <% if (locals.errors && errors.email) { %>
                             <p class="error-login"><%= errors.email.msg %></p>
                         <% } %>
@@ -30,6 +27,7 @@
                     <p class="password">
                         <label for="password"></label>
                         <input type="password" name="password" id="password" pattern=".{8,15}" placeholder="Contraseña" alt="strongPass" alt="alphanumeric" class="<%= locals.errors && errors.password ? 'is-invalid' : null %>">
+                        <small class="error-msg-login"></small>
                         <% if (locals.errors && errors.password) { %>
                             <p class="error-login"><%= errors.password.msg %></p>
                         <% } %>
@@ -40,7 +38,7 @@
                         <p class="showpassword">
                             <input  class="showpassword" type="button" name="showpassword" onclick="mostrar()" value="Mostrar contraseña">
                         </p>   
-                </div>
+
                         <script type="text/javascript">
                             function mostrar() {
                                 let tipo = document.getElementById("password");
@@ -59,7 +57,7 @@
                 </div>
              
                 <div class="enter-buttom-login">
-                    <button type="submit">Entrar<i class="fa-solid fa-paw"></i></button>
+                    <button type="submit" id="submitBtn">Entrar<i class="fa-solid fa-paw"></i></button>
                 </div>
 
                 <div class="create-account">

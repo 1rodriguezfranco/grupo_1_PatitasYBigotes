@@ -225,9 +225,11 @@ h2 {
 }
 
 
-
-
-
+.error-msg-login {
+    color: rgb(195, 104, 13);
+    padding: 2px 0px;
+    font-size: 18px;
+}
 
 
 

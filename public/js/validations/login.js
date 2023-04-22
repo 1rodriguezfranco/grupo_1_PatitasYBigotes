@@ -1,37 +1,38 @@
-window.addEventListener('load', () => {
+const form = document.querySelector('form');
+const inputs = {
+  email: document.getElementById('email'),
+  password: document.getElementById('password'),
+};
+const submitBtn = document.getElementById('submitBtn');
 
-let form = document.querySelector('form');
+// Función para mostrar u ocultar mensajes de error
+function toggleError(input, message) {
+  const errorElem = input.parentNode.querySelector('.error-msg-login');
+  errorElem.innerHTML = message;
+  errorElem.style.display = message ? 'block' : 'none';
+}
 
+// Validar formulario en el evento "submit"
 form.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-    let email = document.getElementById('email');
-    let password = document.getElementById('password');
+  // Reiniciar el objeto de errores
+  const errors = {};
 
-    let errores = [];
+  const emailValue = inputs.email.value.trim();
+  if (emailValue === '') {
+    errors['email'] = 'El correo electrónico es obligatorio';
+  };
+  toggleError(inputs.email, errors['email']);
 
-    if(email.value.trim() == ''){
-        errores.push('El email es obligatorio');
-    } else if (!/\S+@\S+\.\S+/.test(email.value)){
-        errores.push('Debe ser un formato de correo válido');
-    } else {
-        /* (Opcional) → Debe existir en la base. */
-    }
+  const passwordValue = inputs.password.value.trim();
+  if (passwordValue === '') {
+    errors['password'] = 'La contraseña es obligatoria';
+  }
+  toggleError(inputs.password, errors['password']);
 
-    if(password.value.trim() == ''){
-        errores.push('La constraseña es obligatoria');
-    };
-
-
-    if (errores.length > 0) {
-        event.preventDefault();
-
-        let ulErrors = document.querySelector('.errores');
-        ulErrors.innerHTML = '';
-        errores.forEach(error => {
-            ulErrors.innerHTML += `<p>${error}</p>`;
-        });
-    }else{
-        form.submit();
-    };
-})
-})
+  // Enviar formulario si no hay errores
+  if (Object.keys(errors).length === 0) {
+    form.submit();
+  }
+});

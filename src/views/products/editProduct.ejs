@@ -13,103 +13,121 @@
     <div class="row display-flex justify-content-center mt-2 mb-5">
 
       <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
-        <div class="errores">
-          <ul></ul>
-        </div>
-        <h1 class="mb-3 text-center">Estas editando el producto: <i><%= product.name %></i></h1>
+        <h1 class="mb-3 text-center">Estas editando el producto: "<i><%= product.name %></i> "</h1>
 
           <form action="/products/edit/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
-
+              <!-- el atributo "enctype= multipart/form..." es necesario para que multer funcione-->
             <div class="form-group">
               <label for="name">Nombre del Producto</label>
-              <input type="text" id="name" name="name" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value= "<%= locals.productEdited ? productEdited.name : product.name %>">
+              <input type="text" id="name" name="name" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" value= "<%= locals.productToEdit ? productToEdit.name : product.name %>">
+              <small class="error-msg"></small>
               <% if (locals.errors && errors.name) { %>
-                <p style="color: red"><%= errors.name.msg %></p>
+                <p class="text-danger"><%= errors.name.msg %></p>
               <% } %>
             </div>
 
+            <br>
             <div class="form-group">
-              <label for="short_description">Descripcion breve</label>
-              <textarea class="form-control" id="short_description" name="short_description"><%if(locals.productEdited && productEdited.short_description){%><%= productEdited.short_description%><%}else if(locals.product && product.short_description){%><%=product.short_description%><%}else{%><%}%></textarea>
+              <label for="description">Descripcion breve</label>
+              <textarea class="form-control" id="short_description" name="short_description"><%if(locals.productToEdit && productToEdit.short_description){%><%=productToEdit.short_description%><%}else if(locals.product && product.short_description){%><%=product.short_description%><%}else{ null}%></textarea>
+              <small class="error-msg"></small>
+              <% if (locals.errors && errors.short_description) { %>
+                <p class="text-danger"><%= errors.short_description.msg %></p>
+              <% } %>
             </div>
 
+            <br>
             <div class="form-group">
-              <label for="long_description">Descripcion amplia</label>
-              <textarea class="form-control" id="long_description" name="long_description"><%if(locals.productEdited && productEdited.long_description){%><%=productEdited.long_description%><%}else if(locals.product && product.long_description){%><%=product.long_description%><%}else{%><%}%></textarea>
+              <label for="description">Descripcion amplia</label>
+              <textarea class="form-control" id="long_description" name="long_description"><%if(locals.productToEdit && productToEdit.long_description){%><%=productToEdit.long_description%><%}else if(locals.product && product.long_description){%><%=product.long_description%><%}else{null}%></textarea>
             </div>
-
+            
+            <br>
             <div class="form-group">
                 <label for="image" class="form-label">Imagen de producto</label>
                 <input class="form-control" type="file" id="image" name="image">
-            </div>
-
-            <div class="form-group">
-              <label for="id_pet">Seleccione la mascota</label>
-              <select class="form-control" id="mascota" name="id_pet">
-                <option value="" disabled selected>Seleccionar</option>
-                <% for(let i = 0; i < locals.pets.length; i++) { %>
-                  <% if(locals.productEdited && pets[i].id == productEdited.id_pet) { %>
-                    <option value="<%= locals.pets[i].id %>" selected> <%= locals.pets[i].name %> </option>
-                  <% } else if(pets[i].id == product.id_pet) { %>
-                    <option value="<%= locals.pets[i].id %>" selected> <%= locals.pets[i].name %> </option>
-                  <% } else { %>
-                    <option value="<%= locals.pets[i].id %>"> <%= locals.pets[i].name %> </option>
-                  <% } %> 
+                <small class="error-msg"></small>
+                <% if (locals.errors && errors.image) { %>
+                  <p class="text-danger"><%= errors.image.msg %></p>
                 <% } %>
-              </select>
             </div>
-
+            
+            <br>
             <div class="form-group">
-              <label for="id_category">Seleccione la categoria</label>
-              <select class="form-control" id="categoria" name="id_category">
-                <option value="" disabled selected>Seleccionar</option>
-                <% for(let i = 0; i < locals.categories.length; i++) { %>
-                  <% if(locals.productEdited && categories[i].id == productEdited.id_category) { %>
-                    <option value="<%= locals.categories[i].id %>" selected> <%= locals.categories[i].name %> </option>
-                  <% } else if(categories[i].id == product.id_category) { %>
-                    <option value="<%= locals.categories[i].id %>" selected> <%= locals.categories[i].name %> </option>
+              <label for="id_pet">Seleccione la Mascota</label>
+              <select class="form-control" name="id_pet" id="" required>
+                  <option value="" disabled selected>- Seleccionar - </option>
+                  <% for (let i = 0; i < locals.pets.length; i++) { %>
+                    <% if (locals.productToEdit && pets[i].id == productToEdit.id_pet) { %>
+                  <option value="<%= pets[i].id %>" selected><%= pets[i].name %></option>
+                    <% } else if (pets[i].id == product.id_pet) { %>
+                  <option value="<%= pets[i].id %>" selected><%= pets[i].name %></option>
                   <% } else { %>
-                    <option value="<%= locals.categories[i].id %>"> <%= locals.categories[i].name %> </option>
-                  <% } %> 
-                <% } %>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="id_brand">Seleccione la marca</label>
-              <select class="form-control" id="marca" name="id_brand">
-                <option value="" disabled selected>Seleccionar</option>
-                <% for(let i = 0; i < locals.brands.length; i++) { %>
-                  <% if(locals.productEdited && brands[i].id == productEdited.id_brand) { %>
-                    <option value="<%= locals.brands[i].id %>" selected> <%= locals.brands[i].name %> </option>
-                  <% } else if(brands[i].id == product.id_brand) { %>
-                    <option value="<%= locals.brands[i].id %>" selected> <%= locals.brands[i].name %> </option>
-                  <% } else { %>
-                    <option value="<%= locals.brands[i].id %>"> <%= locals.brands[i].name %> </option>
+                  <option value="<%= pets[i].id %>"><%= pets[i].name %></option>
                   <% } %>
-                <% } %> 
+                  <% } %>
               </select>
             </div>
 
+            <br>
+            <div class="form-group">
+              <label for="id_category">Seleccione la Categoria</label>
+              <select class="form-control" name="id_category" id="" required>
+                  <option value="" disabled selected>- Seleccionar - </option>
+                  <% for (let i = 0; i < locals.categories.length; i++) { %>
+                    <% if (locals.productToEdit && categories[i].id == productToEdit.id_category) { %>
+                  <option value="<%= categories[i].id %>" selected><%= categories[i].name %></option>
+                    <% } else if (categories[i].id == product.id_category) { %>
+                  <option value="<%= categories[i].id %>" selected><%= categories[i].name %></option>
+                  <% } else { %>
+                  <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
+                  <% } %>
+                  <% } %>
+              </select>
+            </div>
+            
+            <br>
+            <div class="form-group">
+              <label for="id_brand">Seleccione la Marca</label>
+              <select class="form-control" name="id_brand" id="" required>
+                  <option value="" disabled selected>- Seleccionar - </option>
+                  <% for (let i = 0; i < locals.brands.length; i++) { %>
+                    <% if (locals.productToEdit && brands[i].id == productToEdit.id_brand) { %>
+                  <option value="<%= brands[i].id %>" selected><%= brands[i].name %></option>
+                    <% } else if (brands[i].id == product.id_brand) { %>
+                  <option value="<%= brands[i].id %>" selected><%= brands[i].name %></option>
+                  <% } else { %>
+                  <option value="<%= brands[i].id %>"><%= brands[i].name %></option>
+                  <% } %>
+                  <% } %>
+              </select>
+            </div>
+
+            <br>
             <div class="form-group">
               <label for="price">Precio del producto</label>
-              <input type="text" id="price" name="price" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>" value= "<%= locals.productEdited ? productEdited.price : product.price %>">
+              <input type="text" id="price" name="price" class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %>"
+              value= "<%= locals.productToEdit ? productToEdit.price : product.price %>">
+              <small class="error-msg"></small>
               <% if (locals.errors && errors.price) { %>
-                <p style="color: red"><%= errors.price.msg %></p>
+                <p class="text-danger"><%= errors.price.msg %></p>
               <% } %>
             </div>
 
             <div class="form-group">
               <label for="discount">Descuento aplicado (%)</label>
-              <input type=text id="discount" name="discount" class="form-control <%= locals.errors && errors.discount ? 'is-invalid' : null %>" value= "<%= locals.productEdited ? productEdited.discount : product.discount %>">
+              <input type=text id="discount" name="discount" class="form-control 
+              <%= locals.errors && errors.discount ? 'is-invalid' : null %>" 
+              value= "<%= locals.productToEdit ? productToEdit.discount : product.discount%>">
+              <small class="error-msg"></small>
               <% if (locals.errors && errors.discount) { %>
-                <p style="color: red"><%= errors.discount.msg %></p>
+                <p class="text-danger"><%= errors.discount.msg %></p>
               <% } %>
             </div>
-
+            
             <div class="container my-3">
               <div class="col-md-12 text-center">
-                <button type="submit" class= "btn btn-primary btn-lg">Editar</button>
+                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">Editar</button>
                 <button type="reset" class="btn btn-secondary btn-lg">Limpiar</button>
               </div>
             </div>

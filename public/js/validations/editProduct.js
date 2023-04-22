@@ -1,56 +1,77 @@
-window.addEventListener('load', () => {
+const form = document.querySelector('form');
+const inputs = {
+  name: document.getElementById('name'),
+  short_description: document.getElementById('short_description'),
+  price: document.getElementById('price'),
+  discount: document.getElementById('discount'),
+  image: document.getElementById('image')
+};
+const submitBtn = document.getElementById('submitBtn');
 
-    let form = document.querySelector('form');
-    
-    form.addEventListener('submit', (event) => {
-    
-        let name = document.getElementById('name');
-        let short_description = document.getElementById('short_description');
-        let image = document.getElementById('image');
-        let price = document.getElementById('price');
-    
-        let errores = [];
-    
-        if(name.value.trim() == ''){
-            errores.push('El nombre es obligatorio');
-        } else if (name.value.length < 5 ){
-            errores.push('Debe tener al menos 5 caracteres');
-        };
-    
-        if(short_description.value.trim() == ''){
-            errores.push('La descripción breve es obligatoria');
-        } else if (short_description.value.length < 20 ){
-            errores.push('Debe tener al menos 20 caracteres');
-        };
-    
-        if(price.value.trim() == ''){
-            errores.push('El precio es obligatorio');
-        } else if (isNaN(price.value)){
-            errores.push('Debe ser un número');
-        };
-    
-        let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];  
-        let file = image.files[0];
-    
-        if (!file) {
-            file = "default.jpg";
-        } else {
-            let fileExtension = file.name.split('.').pop();
-        if (!acceptedExtensions.includes(fileExtension.toLowerCase())) {
-            errores.push(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-        }
-        };
-    
-        if (errores.length > 0) {
-            event.preventDefault();
-    
-            let ulErrors = document.querySelector('.errores');
-            ulErrors.innerHTML = '';
-            errores.forEach(error => {
-                ulErrors.innerHTML += `<p>${error}</p>`;
-            });
-        } else{
-            form.submit();
-        };
-    })
-    })
+// Función para mostrar u ocultar mensajes de error
+function toggleError(input, message) {
+  const errorElem = input.parentNode.querySelector('.error-msg');
+  errorElem.innerHTML = message;
+  errorElem.style.display = message ? 'block' : 'none';
+}
+
+// Validar formulario en el evento "submit"
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  // Reiniciar el objeto de errores
+  const errors = {};
+
+  // Validar campo "name"
+  const nameValue = inputs.name.value.trim();
+  if (nameValue === '') {
+    errors['name'] = 'El nombre es obligatorio';
+  } else if (nameValue.length < 5) {
+    errors['name'] = 'Debe tener al menos 5 caracteres';
+  }
+  toggleError(inputs.name, errors['name']);
+
+  // Validar campo "short_description"
+  const shortDescriptionValue = inputs.short_description.value.trim();
+  if (shortDescriptionValue === '') {
+    errors['short_description'] = 'La descripción breve es obligatoria';
+  } else if (shortDescriptionValue.length < 20) {
+    errors['short_description'] = 'Debe tener al menos 20 caracteres';
+  }
+  toggleError(inputs.short_description, errors['short_description']);
+
+  // Validar campo "price"
+  const priceValue = inputs.price.value.trim();
+  if (priceValue === '') {
+    errors['price'] = 'El precio es obligatorio';
+  } else if (isNaN(priceValue)) {
+    errors['price'] = 'Debe ser un número';
+  }
+  toggleError(inputs.price, errors['price']);
+
+  // Validar campo "discount"
+  const discountValue = inputs.discount.value.trim();
+  if (discountValue === '') {
+    errors['discount'] = 'El descuento es obligatorio';
+  } else if (isNaN(discountValue)) {
+    errors['discount'] = 'Debe ser un número';
+  }
+  toggleError(inputs.discount, errors['discount']);
+
+
+  // Validar campo "image"
+  const file = inputs.image.files[0];
+  if (file) {
+    const acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+    const fileExtension = file.name.substring(file.name.lastIndexOf('.')).toLowerCase();
+    if (!acceptedExtensions.includes(fileExtension)) {
+      errors['image'] = `Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`;
+    }
+  }
+  toggleError(inputs.image, errors['image']);
+
+  // Enviar formulario si no hay errores
+  if (Object.keys(errors).length === 0) {
+    form.submit();
+  }
+});
