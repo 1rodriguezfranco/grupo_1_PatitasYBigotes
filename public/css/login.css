@@ -39,7 +39,7 @@
 .email input, .password input {
     border-radius: 5px;
     font-size: 16.5px;
-    width: 190px;
+    width: 210px;
     padding: 0px 6px;
 }
 .error-login {
@@ -112,10 +112,11 @@
     text-decoration: none;
     margin: 5px;
 }
-
-
-
-
+.error-msg-login {
+    color: rgb(195, 104, 13);
+    padding: 3px 0px;
+    font-size: 13.6px; 
+}
 
 
 
@@ -225,13 +226,6 @@ h2 {
 }
 
 
-.error-msg-login {
-    color: rgb(195, 104, 13);
-    padding: 2px 0px;
-    font-size: 18px;
-}
-
-
 
 @media(min-width: 460px) {
     main {
@@ -248,7 +242,7 @@ h2 {
     }
     .email input, .password input {
         font-size: 17.5px;
-        width: 210px;
+        width: 240px;
     }
     .showpassword input {
         font-size: 15.5px;
@@ -270,6 +264,9 @@ h2 {
     }
     .enter-buttom-login button i{
         font-size: 16px;
+    }
+    .error-msg-login {
+        font-size: 15px;
     }
   
 
@@ -338,7 +335,7 @@ h2 {
     }
     .email input, .password input {
         font-size: 20px;
-        width: 255px;
+        width: 280px;
     }
     .showpassword input {
         font-size: 18px;
@@ -375,6 +372,9 @@ h2 {
     }
     .button-change-password a {
         font-size: 19px;
+    }
+    .error-msg-login {
+        font-size: 17px;
     }
 
 

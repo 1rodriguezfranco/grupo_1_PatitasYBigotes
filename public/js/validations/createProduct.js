@@ -13,6 +13,12 @@ function toggleError(input, message) {
   const errorElem = input.parentNode.querySelector('.error-msg');
   errorElem.innerHTML = message;
   errorElem.style.display = message ? 'block' : 'none';
+
+  if (message) {
+    input.classList.add('is-invalid');
+  } else {
+    input.classList.remove('is-invalid');
+  }
 }
 
 // Validar formulario en el evento "submit"
