@@ -44,6 +44,44 @@ header{
     padding: 10px;
     width: 40px;
 }
+.burger-menu .clicked{
+    border: solid 2px rgba(255, 195, 0);
+    padding: 8px;
+    background-color: rgb(37, 89, 157);
+    opacity: 70%;
+}
+header .fix-header .top-header .burger-menu-displayed{
+    display: none;
+}
+header .fix-header .top-header .burger-menu-displayed a{
+    text-decoration: none;
+    color: rgb(37, 89, 157);
+}
+header .fix-header .top-header .burger-menu-displayed .pet{
+    padding: 1px;
+}
+header .fix-header .top-header .burger-menu-displayed ul li{
+    display: none;
+}
+header .fix-header .top-header .burger-menu-displayed ul .li-blocked{
+    display: block;
+    padding-left: 5px;
+}
+header .fix-header .top-header .burger-menu-displayed ul .li-blocked a{
+    color: rgb(91, 87, 87);
+}
+header .fix-header .top-header .burger-menu-displayed-block{
+    position: absolute;
+    padding: 5px;
+    top: 102px;
+    left: 0px;
+    width: 50%;
+    border: solid 1px rgb(37, 89, 157);
+    border-radius: 1%;
+    z-index: 10;
+    background-color: whitesmoke;
+    display: block;
+}
 .logo img{
     width: 75px;
 }
@@ -118,6 +156,64 @@ header .center-header .form .submit{
 header .site-navbar{
     display: none;
 }
+header .site-navbar-displayed .perros{
+    position: absolute;
+    z-index: 9;
+    width: 20%;
+    left: 0.5px;
+    padding-left: 3px;
+    background-color: #7fc0e1f5;
+    border: 1px solid #65acd0;
+    display: none;
+}
+header .site-navbar-displayed .gatos{
+    position: absolute;
+    z-index: 9;
+    width: 20%;
+    left: 20%;
+    padding-left: 3px;
+    background-color: #7fc0e1f5;
+    border: 1px solid #65acd0;
+    display: none;
+}
+header .site-navbar-displayed .roedores{
+    position: absolute;
+    z-index: 9;
+    width: 20%;
+    left: 40%;
+    padding-left: 3px;
+    background-color: #7fc0e1f5;
+    border: 1px solid #65acd0;
+    display: none;
+}
+header .site-navbar-displayed .aves{
+    position: absolute;
+    z-index: 9;
+    width: 20%;
+    left: 60%;
+    padding-left: 3px;
+    background-color: #7fc0e1f5;
+    border: 1px solid #65acd0;
+    display: none;
+}
+header .site-navbar-displayed .marcas{
+    position: absolute;
+    z-index: 9;
+    width: 19.7%;
+    left: 80%;
+    padding-left: 3px;
+    background-color: #7fc0e1f5;
+    border: 1px solid #65acd0;
+    display: none;
+}
+header .site-navbar-displayed .ul-block{
+    display: block;
+}
+header .site-navbar-displayed ul li a{
+    text-decoration: none;
+    font-size: 0.8em;
+    color: rgb(37, 89, 157);
+}
 
 
 footer{
@@ -167,59 +263,6 @@ footer .redesSociales a i{
     color: rgb(37, 89, 157);
     font-size: 1.3rem;
 }
-/*
-.footer-article{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 4px;
-}
-.footer-article a{
-    text-decoration: none;
-}
-.footer-article div{
-    border-bottom: solid 1px #7fb9d3;
-    margin-bottom: 7px;
-}
-.footer-article div p{
-    width: 100%;
-    color: rgb(37, 89, 157);
-    text-align: center;
-    font-size: 1.1rem;
-    padding-bottom: 2px;
-}
-.footer-article article p{
-    font-size: 1rem;
-    opacity: 0.6;
-    color: rgb(37, 89, 157);
-}
-.footer-article div article{
-    display: none;
-}
-.footer-article div article .desplegable p{
-    display: none;
-}
-.footer-article .ref-logo{
-    width: 25%;
-    display: flex;
-    justify-content: center;
-}
-.footer-article .ref-logo img{
-    width: 100%;
-}
-footer .redesSociales{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 4px 25%
-}
-footer .redesSociales i{
-    color: rgb(37, 89, 157);
-    font-size: 1.4rem;
-}
-*/
 
 
 @media (min-width: 460px){
@@ -265,18 +308,15 @@ footer .redesSociales i{
     .navbar-celphone{
         display: none;
     }
-
-    /*
-    .footer-article .ref-logo{
-        width: 113px;
-        height: 101.7px;
-    }
-    */
 }
 
+
 @media (min-width: 769px){
+    header {
+        background-color: #8ECAE6;
+    }
     header .fix-header{
-        height: 80px;
+        height: 101.5px;
     }
     header .top-header .logo{
         position: relative;
@@ -338,23 +378,10 @@ footer .redesSociales i{
         bottom: 40px;
         right: 60px;
     }
-    header .site-navbar{
-        margin-top: 80px;
+    header .site-navbar-displayed ul li a{
+        font-size: 0.9rem;
     }
-    header .site-navbar li{
-        font-size: 1.1em;
-        transition: all 0.3s;
-    }
-    header .site-navbar li:hover{
-        color: rgb(255, 195, 0, 0.9);
-    }
-    header .site-navbar i{
-        font-size: 0.7em;
-        transition: all 0.3s;
-    }
-    header .site-navbar li:hover i{
-        color: rgb(255, 195, 0, 0.9);
-    }
+
     footer .footer-article{
         flex-direction: row;
         justify-content:space-around;
@@ -371,25 +398,4 @@ footer .redesSociales i{
     footer .redesSociales a i:hover{
         font-size: 1.5rem;
     }
-
-    /*
-    footer .footer-article div:hover article{
-        display: block;
-    }
-    footer .footer-article .nosotros:hover article p a{
-        color: rgb(37, 89, 157);
-    }
-    footer .footer-article .categorias article:hover article p{
-        display: block;
-    }
-    footer .footer-article .categorias article:hover article p a{
-        color: #023047;
-    }
-    footer .redesSociales i{
-        transition: all 0.3s;
-    }
-    footer .redesSociales i:hover{
-        font-size: 1.8rem;
-    }
-    */
 }
