@@ -101,6 +101,30 @@ const controller = {
 	list: async (req, res) => {
 		let allProducts = await db.Product.findAll();
 		res.render("./products/productsList", {products: allProducts});
+	},
+
+	listByPet: async (req, res) => {
+		let petParam = req.params.pet;
+		let allProducts = await db.Product.findAll();
+		let allPets = await db.Pet.findAll();
+		let validPet = false;
+		let productsByPet = [];
+
+		for(let j = 0; j < allPets.length; j++){
+			if(allPets[j].name.toLowerCase() == petParam){
+				validPet = true;
+				let idPet = allPets[j].id;
+				for(let i = 0; i < allProducts.length; i++){
+					if(idPet == allProducts[i].id_pet){
+						productsByPet.push(allProducts[i]);
+					};
+				};
+			};
+		};
+
+		if(validPet && productsByPet){
+			res.render("./products/productsByPet", {products: productsByPet});
+		}
 	}
 
 };
