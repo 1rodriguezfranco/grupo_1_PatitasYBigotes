@@ -28,6 +28,14 @@ router.delete('/details/:id', productsController.destroy);
 
 router.get("/list", productsController.list);
 
+
 router.get("/:pet", productsController.listByPet);
+
+
+router.get("/perro/:category", productsController.listByCategoryPerro);
+router.get("/gato/:category", productsController.listByCategoryGato);
+router.get("/roedor/:category", productsController.listByCategoryRoedor);
+router.get("/ave/:category", productsController.listByCategoryAve);
+
 
 module.exports = router;

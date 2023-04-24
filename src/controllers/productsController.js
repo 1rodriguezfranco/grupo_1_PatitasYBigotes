@@ -125,6 +125,118 @@ const controller = {
 		if(validPet && productsByPet){
 			res.render("./products/productsByPet", {products: productsByPet});
 		}
+	},
+
+	listByCategoryPerro: async (req, res) => {
+		let categoryParam = req.params.category;
+		let allProducts = await db.Product.findAll();
+		let allCategories = await db.ProductCategory.findAll();
+		let validCategory = false;
+		let productsByPet = [];
+		let productsByCategory = [];
+
+		for(let i = 0; i < allProducts.length; i++){
+			if(allProducts[i].id_pet === 1){
+				productsByPet.push(allProducts[i]);
+				for(let j = 0; j < allCategories.length; j++){
+					if(allCategories[j].name.toLowerCase() == categoryParam){
+						validCategory = true;
+						let idCategory = allCategories[j].id;
+						productsByCategory = productsByPet.filter((product) => {
+							return product.id_category == idCategory
+						});
+					};
+				};
+			};
+		};
+
+		if(validCategory && productsByCategory){
+			res.render("./products/productsByCategory", {products: productsByCategory});
+		};
+	},
+
+	listByCategoryGato: async (req, res) => {
+		let categoryParam = req.params.category;
+		let allProducts = await db.Product.findAll();
+		let allCategories = await db.ProductCategory.findAll();
+		let validCategory = false;
+		let productsByPet = [];
+		let productsByCategory = [];
+
+		for(let i = 0; i < allProducts.length; i++){
+			if(allProducts[i].id_pet === 2){
+				productsByPet.push(allProducts[i]);
+				for(let j = 0; j < allCategories.length; j++){
+					if(allCategories[j].name.toLowerCase() == categoryParam){
+						validCategory = true;
+						let idCategory = allCategories[j].id;
+						productsByCategory = productsByPet.filter((product) => {
+							return product.id_category == idCategory
+						});
+					};
+				};
+			};
+		};
+
+		if(validCategory && productsByCategory){
+			res.render("./products/productsByCategory", {products: productsByCategory});
+		};
+	},
+
+	listByCategoryRoedor: async (req, res) => {
+		let categoryParam = req.params.category;
+		let allProducts = await db.Product.findAll();
+		let allCategories = await db.ProductCategory.findAll();
+		let validCategory = false;
+		let productsByPet = [];
+		let productsByCategory = [];
+
+		for(let i = 0; i < allProducts.length; i++){
+			if(allProducts[i].id_pet === 3){
+				productsByPet.push(allProducts[i]);
+				for(let j = 0; j < allCategories.length; j++){
+					if(allCategories[j].name.toLowerCase() == categoryParam){
+						validCategory = true;
+						let idCategory = allCategories[j].id;
+						productsByCategory = productsByPet.filter((product) => {
+							return product.id_category == idCategory
+						});
+					};
+				};
+			};
+		};
+
+		if(validCategory && productsByCategory){
+			res.render("./products/productsByCategory", {products: productsByCategory});
+		};
+	},
+
+	listByCategoryAve: async (req, res) => {
+		let categoryParam = req.params.category;
+		let allProducts = await db.Product.findAll();
+		let allCategories = await db.ProductCategory.findAll();
+		let validCategory = false;
+		let productsByPet = [];
+		let productsByCategory = [];
+
+		for(let i = 0; i < allProducts.length; i++){
+			if(allProducts[i].id_pet === 4){
+				productsByPet.push(allProducts[i]);
+				for(let j = 0; j < allCategories.length; j++){
+					if(allCategories[j].name.toLowerCase() == categoryParam){
+						validCategory = true;
+						let idCategory = allCategories[j].id;
+						productsByCategory = productsByPet.filter((product) => {
+							return product.id_category == idCategory
+						});
+					};
+				};
+			};
+		};
+
+		if(validCategory && productsByCategory){
+			res.render("./products/productsByCategory", {products: productsByCategory});
+		};
 	}
 
 };
