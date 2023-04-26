@@ -4,13 +4,13 @@ window.addEventListener('load', function(){
     let burgerInside = document.querySelector('.burger-menu i');
     let burgerDisplayed = document.querySelector('.burger-menu-displayed');
 
-    let burgerPerro = document.querySelector('.burger-menu-displayed .perros');
+    let burgerPerro = document.querySelector('.burger-menu-displayed .perros p');
     let burgerPerroList = document.querySelectorAll('.burger-menu-displayed .perros li');
-    let burgerGato = document.querySelector('.burger-menu-displayed .gatos');
+    let burgerGato = document.querySelector('.burger-menu-displayed .gatos p');
     let burgerGatoList = document.querySelectorAll('.burger-menu-displayed .gatos li');
-    let burgerRoedor = document.querySelector('.burger-menu-displayed .roedores');
+    let burgerRoedor = document.querySelector('.burger-menu-displayed .roedores p');
     let burgerRoedorList = document.querySelectorAll('.burger-menu-displayed .roedores li');
-    let burgerAve = document.querySelector('.burger-menu-displayed .aves');
+    let burgerAve = document.querySelector('.burger-menu-displayed .aves p');
     let burgerAveList = document.querySelectorAll('.burger-menu-displayed .aves li');
 
     let navBarPerro = document.querySelector('.site-navbar .perros');
