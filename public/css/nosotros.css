@@ -1,0 +1,33 @@
+.nosotros{
+    padding: 5vw;
+}
+
+.nosotros .image img{
+    width: 100%;
+}
+
+@media (min-width: 460px){
+    .nosotros .image img{
+        width: 420px;
+    }
+}
+
+@media (min-width: 769px){
+
+    .nosotros{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nosotros .message{
+        width: 45%;
+    }
+
+    .nosotros .image{
+        width: 45%;
+    }
+
+    .nosotros .image img{
+        width: 330px;
+    }
+}

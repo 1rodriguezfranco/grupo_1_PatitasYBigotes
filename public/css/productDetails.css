@@ -94,6 +94,9 @@
         color: white;
         margin: 2px;
     }
+    .infoProduct .article .section .edit-delete form{
+        width: 80px;
+    }
     .infoProduct .article .section .edit-delete .eliminar{
         font-size: 1rem;
         padding: 7px 15px;
@@ -103,7 +106,7 @@
         cursor: pointer;
         color: white;
         margin: 2px;
-        width: 50%;
+        width: 100%;
         height: 35px;
     }
 
