@@ -122,36 +122,29 @@ header .cart i{
     font-size: 1.8rem;
     color: rgb(37, 89, 157);
 }
-.center-header{
-    padding-bottom: 4px;
+header .center-header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-header .center-header .form{
-    width: 85%;
+header .center-header form{
+    width: 60%;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid gray;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    margin-bottom: 4px;
 }
-header .center-header .form .input{
-    background-color: #FFF;
-    border: 1px solid rgb(37, 89, 157);
-    outline: none;
-    color: rgb(37, 89, 157);
-    padding: 0vw 0vw 2px 2px;
-    width: 75%;
-    height: 25px;
-    font-size: 1.1rem;
+header .center-header form input{
+    width: 90%;
+    padding: 2px;
+    border: none;
 }
-header .center-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid rgb(37, 89, 157);
-    color: rgb(37, 89, 157);
-    width: 25px;
-    height: 25px;
-    font-size: 1.3rem;
-    text-align: center;
+header .center-header form i{
+    width: 8%;
+    color: gray;
 }
 header .site-navbar{
     display: none;
@@ -284,6 +277,10 @@ footer .redesSociales a i{
     .navbar-tablet{
         display: block;
     }
+
+    header .center-header form{
+        width: 281.4px;
+    }
     
     header .site-navbar{
         display: block;
@@ -317,11 +314,11 @@ footer .redesSociales a i{
         background-color: #8ECAE6;
     }
     header .fix-header{
-        height: 101.5px;
+        height: 95px;
     }
     header .top-header .logo{
         position: relative;
-        top: 5px;
+        top: 13px;
         right: 175px;
     }
     header .fix-header .top-header .navbar-tablet .user-logged-navbar-tablet a img{
@@ -374,10 +371,19 @@ footer .redesSociales a i{
     header .top-header .cart:hover i{
         color: rgb(255, 195, 0, 0.9);
     }
-    header .fix-header .center-header .form{
+    header .fix-header .center-header form{
         position: relative;
         bottom: 40px;
-        right: 60px;
+        right: 80px;
+    }
+    header .fix-header .center-header form input{
+        font-size: 1rem;
+    }
+    header .fix-header .center-header form i{
+        font-size: 1.3rem;
+    }
+    header .site-navbar{
+        margin-top: 95px;
     }
     header .site-navbar-displayed ul li a{
         font-size: 0.9rem;
