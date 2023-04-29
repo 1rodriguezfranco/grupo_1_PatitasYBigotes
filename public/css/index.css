@@ -47,10 +47,13 @@
     border:  solid 1px rgba(203, 200, 200, 0.94);
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.marcasDestacadas .marca img{
-    width: 100%;
-    height: 100%;
+.marcasDestacadas .marca a{
+    text-decoration: none;
+}
+.marcasDestacadas .marca a h2{
+    color: rgb(37, 89, 157);
 }
 
 

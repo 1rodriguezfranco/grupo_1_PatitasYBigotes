@@ -127,6 +127,22 @@ const controller = {
 		}
 	},
 
+	listByBrand: async (req, res) => {
+		let idBrand = req.params.id;
+		let allProducts = await db.Product.findAll();
+		let productsByBrand = [];
+
+		for(let i = 0; i < allProducts.length; i++){
+			if(allProducts[i].id_brand == idBrand){
+				productsByBrand.push(allProducts[i]);
+			};
+		};
+
+		if(productsByBrand){
+			res.render("./products/productsByPet", {products: productsByBrand});
+		}
+	},
+
 	listByCategoryPerro: async (req, res) => {
 		let categoryParam = req.params.category;
 		let allProducts = await db.Product.findAll();

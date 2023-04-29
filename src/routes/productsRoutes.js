@@ -10,27 +10,22 @@ const validationsProductEdit = require(path.join(__dirname, '../middlewares/vali
 /* Controller Require */
 const productsController = require("../controllers/productsController");
 
-
 /*** CREATE ONE PRODUCT ***/
 router.get('/create', productsController.create);
 router.post('/create', upload.single("image"), validationsProductCreate, productsController.store);
-
 
 /*** EDIT ONE PRODUCT ***/
 router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', upload.single("image"), validationsProductEdit, productsController.update);
 
-
 /*** DELETE ONE PRODUCT***/ 
 router.get("/details/:id", productsController.details);
 router.delete('/details/:id', productsController.destroy); 
 
-
 router.get("/list", productsController.list);
 
-
 router.get("/:pet", productsController.listByPet);
-
+router.get("/brands/:id", productsController.listByBrand);
 
 router.get("/perro/:category", productsController.listByCategoryPerro);
 router.get("/gato/:category", productsController.listByCategoryGato);
