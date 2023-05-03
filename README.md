@@ -20,4 +20,4 @@
 </ul>
 
 <h2>Link del tablero de trabajo</h2>
-<p>https://trello.com/b/qlJf1vsa/sprint-2</p>
+<p>https://trello.com/w/espaciodetrabajodeuser80780063/home</p>
