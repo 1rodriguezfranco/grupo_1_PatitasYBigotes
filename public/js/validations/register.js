@@ -1,4 +1,4 @@
-const form = document.querySelector('form');
+const form = document.getElementById('register-form');
 const inputs = {
   first_name: document.getElementById('first_name'),
   last_name: document.getElementById('last_name'),

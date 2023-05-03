@@ -15,7 +15,7 @@
       <div class="col-lg-5 col-md-8 col-xs-12 col-sm-12">
         <h1 class="mb-3 text-center">Estas editando el producto: "<i><%= product.name %></i> "</h1>
 
-          <form action="/products/edit/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+          <form action="/products/edit/<%= product.id %>?_method=PUT" id="product-edit-form" method="post" enctype="multipart/form-data">
               <!-- el atributo "enctype= multipart/form..." es necesario para que multer funcione-->
             <div class="form-group">
               <label for="name">Nombre del Producto</label>

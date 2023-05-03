@@ -1,4 +1,4 @@
-const form = document.querySelector('form');
+const form = document.getElementById('product-form');
 const inputs = {
   name: document.getElementById('name'),
   short_description: document.getElementById('short_description'),

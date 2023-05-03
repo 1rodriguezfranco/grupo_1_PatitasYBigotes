@@ -15,7 +15,7 @@
 
                 <h4 class="subtitle-login">Ingresa tu e-mail y contraseña!</h4>
             
-            <form action="/auth/login" method="POST">
+            <form action="/auth/login" id="form-login" method="POST">
                     <p class="email">
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="E-mail" class="<%= locals.errors && errors.email ? 'is-invalid' : null %>" value= "<%= locals.oldData && oldData.email ? oldData.email : null %>">

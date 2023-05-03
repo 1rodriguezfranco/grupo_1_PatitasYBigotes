@@ -1,4 +1,4 @@
-const form = document.querySelector('form');
+const form = document.getElementById('form-login');
 const inputs = {
   email: document.getElementById('email'),
   password: document.getElementById('password'),
