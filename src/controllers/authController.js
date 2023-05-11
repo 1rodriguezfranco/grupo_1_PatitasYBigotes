@@ -79,10 +79,8 @@ const authController = {
                 validUser = allUsers[i];
             };
         };
-        for(let i = 0; i < allUsers.length; i++){
-            if(bcrypt.compareSync(req.body.password, allUsers[i].password)){
-                validUserPassword = true
-            };
+        if(bcrypt.compareSync(req.body.password, validUser.password)){
+            validUserPassword = true;
         };
         if(validUserEmail && validUserPassword){
             delete validUser.password
