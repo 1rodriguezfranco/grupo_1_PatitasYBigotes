@@ -33,9 +33,16 @@ const mainRouter = require("./routes/mainRoutes");
 const authRouter = require("./routes/authRoutes");
 const productsRouter = require("./routes/productsRoutes");
 
+// ************ Route System APIs ************
+const apiUsersRouter = require('./routes/api/users');
+const apiProductsRouter = require('./routes/api/products');
+
 app.use("/", mainRouter);
 app.use("/auth", authRouter);
 app.use("/products", productsRouter);
+
+app.use('/api/users',apiUsersRouter);
+app.use('/api/products',apiProductsRouter);
 
 // ************ catch 404 and forward to error handler ************
 app.use((req, res, next) => next(createError(404)));
