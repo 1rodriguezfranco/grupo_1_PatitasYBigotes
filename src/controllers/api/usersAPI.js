@@ -18,7 +18,7 @@ const usersAPI = {
             name: user.first_name + " " + user.last_name,
             email: user.email,
             detail: {
-              url: `http://localhost:3000/api/users/${user.id}`,
+              url: `http://localhost:3001/api/users/${user.id}`,
             },
           };
         }),
@@ -41,7 +41,7 @@ const usersAPI = {
           status: 200,
           data: { id, first_name, last_name, email, avatar },
           detail: {
-            url: `http://localhost:3000/images/avatars/${avatar}`,
+            url: `http://localhost:3001/images/avatars/${avatar}`,
           }
         };
 

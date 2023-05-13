@@ -53,7 +53,7 @@ const productsAPI = {
                 }))
             },*/
             detail: {
-                url: `http://localhost:3000/api/products/${prod.id}`,
+                url: `http://localhost:3001/api/products/${prod.id}`,
             }
         };
         })
@@ -90,7 +90,7 @@ const productsAPI = {
             brand
           }],
           detail: {
-            url: `http://localhost:3000/images/products/${image}`
+            url: `http://localhost:3001/images/products/${image}`
           }
         };
 

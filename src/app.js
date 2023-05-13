@@ -8,7 +8,8 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 const app = express();
 const session = require('express-session');
 const userLoggedAPP = require(path.join(__dirname, './middlewares/auths/userLoggedAPP'));
-const PORT = 3000;
+const PORT = 3001;
+const cors = require('cors');
 
 // ************ Middlewares - ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
@@ -23,6 +24,7 @@ app.use(session({
 }));
 app.use(userLoggedAPP); //Middleware del usuario logueado
 app.use(methodOverride('_method')); // Para poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(cors());
 //---------------------------------------------------------------------------------------------------------------------------
 
 app.set ("view engine", "ejs");
