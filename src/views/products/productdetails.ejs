@@ -19,7 +19,7 @@
 
                 <div class="preview">
                     
-                    <img src="/images/products/<%= product.image %>" class="producto">
+                    <img style="width: 100%;" src="/images/products/<%= product.image %>" class="producto">
                     <p class="detalle"><%= locals.product && product.short_description ? product.short_description : null %></p>
                     <p class="precioanterior">$ <%= product.price %></p>
                     <p class="precioactual">$ <%= product.final_price %></p>

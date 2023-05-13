@@ -59,7 +59,7 @@
             <% for(let product of products) { %>
                 
                     <div class="producto"> 
-                        <a href="/products/details/<%= product.id %>" class="imagen"><img src="/images/products/<%= product.image %>"></a>
+                        <a href="/products/details/<%= product.id %>" class="imagen"><img style="width: 100%;" src="/images/products/<%= product.image %>"></a>
                         <p class="nombre"><%= product.name %></p>
                         <p class="descripcion"><%= product.description %></p>
                         <p class="precio">$ <%= product.final_price %></p>
