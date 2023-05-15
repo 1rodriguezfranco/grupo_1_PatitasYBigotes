@@ -4,7 +4,6 @@
 }
 .main-title-login h2 {
     font-size: 19px;
-    letter-spacing: 1.2px;
     margin-bottom: 20px;
 }
 .main-title-login, .subtitle-login{
@@ -16,7 +15,6 @@
 .subtitle-login {
     font-size: 16.5px;
     color: rgb(31, 97, 141 );
-    letter-spacing: 2.5px;
 }
 .main-title-login i {
     padding: 0px 8px;
@@ -30,7 +28,6 @@
     flex-wrap: wrap;
     align-content: center;
     flex-direction: column;
-    letter-spacing: 0.5px;
     margin-top: 18px;
 }
 .password {
@@ -50,7 +47,6 @@
     align-items: center;
 }
 .showpassword {
-    letter-spacing: 0.4px;
     display: flex;
     justify-content: center;
     margin-top: 4px;
@@ -79,8 +75,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    letter-spacing: 0.7px;
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 500;
 }
 .create-account p, .create-account a {
@@ -124,7 +119,6 @@
 /* New Password */ 
 h2 {
     font-size: 19px;
-    letter-spacing: 1.5px;
     margin: 7px;
 }
 .main-password {
@@ -142,7 +136,6 @@ h2 {
 .new-password, .confirm-new-password {
     flex-wrap: wrap;
     align-content: center;
-    letter-spacing: 0.5px;
     margin: 12px;
 }
 .new-password input, .confirm-new-password input {
@@ -156,7 +149,6 @@ h2 {
 }
 .button-change-password button{
     background-color: #69d177;
-    letter-spacing: 0.5px;
     border-radius: 5px;
 }
 .button-change-password a {
@@ -183,12 +175,10 @@ h2 {
     padding: 55px;
 }
 .title-recover {
-    letter-spacing: 3px;
     font-size: 19px;
 }
 .subtitle-recover {
     font-size: 16.5px;
-    letter-spacing: 1.8px;
     margin: 4px 0px;
     color: rgb(31, 97, 141 );
 }
@@ -207,7 +197,7 @@ h2 {
 }
 .new-sesion-button a, .recover-button a{
     text-decoration: none; 
-    font-size: 16px;
+    font-size: 15px;
     margin: 10px;
     color: black;
 }
@@ -245,7 +235,7 @@ h2 {
         width: 240px;
     }
     .showpassword input {
-        font-size: 15.5px;
+        font-size: 14.5px;
         width: 140px;
         height: 23px;
     }
@@ -257,7 +247,7 @@ h2 {
         font-size: 16px;
     }
     .create-account, .recover-password, .forgot-password, .enter-buttom-login, .recorder {
-        font-size: 17px;
+        font-size: 16px;
     }
     .enter-buttom-login button {
         font-size: 15.5px;
@@ -300,7 +290,7 @@ h2 {
         padding: 1px 5px
     }
     .new-sesion-button a, .recover-button a{
-        font-size: 17.5px;
+        font-size: 16.5px;
     }
     .top-main-recover {
         margin-top: 10px;
@@ -331,19 +321,18 @@ h2 {
     }
     .recorder input, .recorder label {
         font-size: 18px;
-        letter-spacing: 1.3px;
     }
     .email input, .password input {
         font-size: 20px;
         width: 280px;
     }
     .showpassword input {
-        font-size: 18px;
+        font-size: 17px;
         width: 160px;
         height: 25px;
     }
     .create-account, .recover-password, .forgot-password, .enter-buttom-login, .recorder {
-        font-size: 21px;
+        font-size: 19.5px;
     }
     .create-account p, .create-account a {
         margin-bottom: 3px;
@@ -393,7 +382,7 @@ h2 {
     width: 275px;
     }
     .new-sesion-button a, .recover-button a{
-        font-size: 20px;
+        font-size: 19px;
     }
     .new-sesion-button {
         margin: 3px 0px
