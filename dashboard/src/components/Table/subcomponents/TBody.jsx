@@ -6,9 +6,9 @@ function TBody(props) {
 
         <tbody>
             {
-                props.data.map((row, i) => (
+                props.data.map((row, j) => (
 
-                    <tr key={row.name + i}>
+                    <tr key={row.name + j}>
                         {props.columns.map((col) => (
 
                             <td>{col == "genre" ? row[col]?.name : row[col]}</td>

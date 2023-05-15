@@ -21,7 +21,6 @@
         border: solid 1px rgb(255, 195, 0, 0.9);
         border-radius: 25px;
         width: 204px;
-        height: 488px;
         background-color: white;
         display: flex;
         flex-wrap: wrap;
@@ -94,12 +93,12 @@
         color: white;
         margin: 2px;
     }
-    .infoProduct .article .section .edit-delete form{
-        width: 80px;
+    .infoProduct .article .section .edit-delete .form{
+        width: 85px;
     }
     .infoProduct .article .section .edit-delete .eliminar{
         font-size: 1rem;
-        padding: 7px 15px;
+        padding: 7px 10px;
         background-color: rgb(212, 3, 3);
         border: solid 1px rgb(255, 0, 0);
         border-radius: 50px;
@@ -109,7 +108,6 @@
         width: 100%;
         height: 35px;
     }
-
 
     .infoProduct .article .detalleTablet{
         display: none;
@@ -138,7 +136,7 @@
         height: 375px;
     }
     .infoProduct .article .section h2{
-        height: 0px;
+        padding: 1px;
     }
     .infoProduct .article .section .preview img{
         width: 90%;
@@ -154,7 +152,7 @@
     .infoProduct .article .detalleTablet{
         display: block;
         padding: 10px;
-        width: 175px;
+        width: 225px;
     }
     .infoProduct .article .detalleTablet .detalleProductoAmpliado .detalleAmplio{
         font-size: 1.1rem;
@@ -216,5 +214,7 @@
 }
 
 @media (min-width: 769px){
-    
+    .infoProduct .article {
+        width: 450px;
+    }
 }

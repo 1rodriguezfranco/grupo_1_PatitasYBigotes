@@ -56,9 +56,7 @@ const authController = {
                 .then(()=>{ return res.redirect("/auth/login") })
         }
     },
-
-    register2: (req, res) => res.render ("./auth/register2"),
-
+    
     login: (req, res) => res.render ("./auth/login"),
 
     loginProcess: async (req, res) => {

@@ -1,10 +1,10 @@
-*{
-    font-family: 'Mouse Memoirs', sans-serif;
-    letter-spacing: 1.5px;
+*{ 
+    font-family: 'Karla', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
 
 
 body{
@@ -137,12 +137,12 @@ header .center-header form{
     padding: 2px;
     margin-bottom: 4px;
 }
-header .center-header form input{
+header .center-header .buscador .placeh{
     width: 90%;
     padding: 2px;
     border: none;
 }
-header .center-header form i{
+header .center-header .buscador i{
     width: 8%;
     color: gray;
 }
@@ -278,7 +278,7 @@ footer .redesSociales a i{
         display: block;
     }
 
-    header .center-header form{
+    header .center-header .buscador{
         width: 281.4px;
     }
     
@@ -300,9 +300,7 @@ footer .redesSociales a i{
         font-size: 0.6rem;
         color: rgb(37, 89, 157);
     }
-    header .fix-header .center-header .form .input{
-        width: 300px;
-    }
+
     .navbar-celphone{
         display: none;
     }
@@ -371,15 +369,15 @@ footer .redesSociales a i{
     header .top-header .cart:hover i{
         color: rgb(255, 195, 0, 0.9);
     }
-    header .fix-header .center-header form{
+    header .fix-header .center-header .buscador{
         position: relative;
         bottom: 40px;
         right: 80px;
     }
-    header .fix-header .center-header form input{
+    header .fix-header .center-header .buscador .placeh{
         font-size: 1rem;
     }
-    header .fix-header .center-header form i{
+    header .fix-header .center-header .buscador i{
         font-size: 1.3rem;
     }
     header .site-navbar{

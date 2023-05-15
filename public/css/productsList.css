@@ -1,7 +1,7 @@
 main{
     margin-top: 101.5px;
 }
-main .titleProductList{
+.titleProductList{
     font-size: 1.6rem;
     font-weight: lighter;
     padding: 2px 4px;
@@ -26,7 +26,6 @@ main .titleProductList{
     border: 1px solid rgb(255, 195, 0, 0.9);
     border-radius: 5%;
     justify-content: center;
-    padding-bottom: 5px;
 }
 .listadoProductos .productos .producto .imagen{
     width: 100%;
@@ -54,33 +53,7 @@ main .titleProductList{
     font-size: 1.1rem;
     font-weight: bolder;
     text-align: center;
-}
-.listadoProductos .productos .producto .agregar{
-    text-decoration: none;
-}
-.listadoProductos .productos .producto .agregarCarrito{
-    width: 130px;
-    font-size: 1.1rem;
-    color: white;
-    text-align: center;
-    background-color: #0071FF;
-    border: solid 1px #0071FF;
-    border-radius: 8%;
-    margin: 2px;
-}
-.listadoProductos .productos .producto .compra{
-    width: 40%;
-    text-decoration: none;
-}
-.listadoProductos .productos .producto .compra .comprar{
-    width: 65px;
-    font-size: 1.1rem;
-    color: white;
-    text-align: center;
-    background-color: green;
-    border: solid 1px green;
-    border-radius: 10%;
-    margin: 2px;
+    padding: 5px 0px;
 }
 
 @media (min-width: 460px){
@@ -89,7 +62,6 @@ main .titleProductList{
     }
     .listadoProductos .productos .producto{
         width: 213.4px;
-        height: 350px;
     }
 }
 
@@ -101,7 +73,6 @@ main .titleProductList{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
         border-color: rgb(37, 89, 157);
         width: 218.4px;
-        height: 355px;
     }
     main .listadoProductos .productos .producto:hover img{
         border-color: rgb(37, 89, 157);

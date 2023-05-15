@@ -20,7 +20,6 @@ const authController = require("../controllers/authController");
 /*** Register ***/
 router.get("/register", authUserLogged, authController.register);
 router.post("/register", upload.single("avatar"), validationsRegister, authController.store);
-// router.get("/register2", authRouter.register2);
 
 /* Login */
 router.get("/login", authUserLogged, authController.login);
