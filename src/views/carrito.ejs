@@ -5,13 +5,15 @@
 
 <body>
 
-    <%- include("./partials/header") %>
+   
     
+    <%- include("./partials/header") %>
 
-    <div class="cart-container">
+
+      <div class="cart-container">
         <h2>Carrito de compras</h2>
         <div class="cart-items">
-            <!-- Producto 1  -->
+          <!-- Producto 1  -->
           <div class="cart-row">
             <div class="cart-item">
               <img src="/img/148052.webp" alt="Producto 1">
@@ -19,11 +21,11 @@
               <p>Descripción del producto 1</p>
             </div>
             <div class="product-quantity">
-                <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
-                <input class="quantity-input" type="number" min="1" value="1" />
-                <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
-              </div>
-            <div class="cart-item-total">
+              <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
+              <input class="quantity-input" type="number" min="1" value="1" />
+              <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="cart-item-total precio-individual">
               <p>$10</p>
             </div>
             <div class="cart-item-remove">
@@ -38,10 +40,10 @@
               <p>Descripción del producto 2</p>
             </div>
             <div class="product-quantity">
-                <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
-                <input class="quantity-input" type="number" min="1" value="1" />
-                <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
-              </div>
+              <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
+              <input class="quantity-input" type="number" min="1" value="1" />
+              <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
+            </div>
             <div class="cart-item-total">
               <p>$20</p>
             </div>
@@ -57,10 +59,10 @@
               <p>Descripción del producto 3</p>
             </div>
             <div class="product-quantity">
-                <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
-                <input class="quantity-input" type="number" min="1" value="1" />
-                <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
-              </div>
+              <button class="quantity-decrement" type="button"><i class="fas fa-minus"></i></button>
+              <input class="quantity-input" type="number" min="1" value="1" />
+              <button class="quantity-increment" type="button"><i class="fas fa-plus"></i></button>
+            </div>
             <div class="cart-item-total">
               <p>$30</p>
             </div>
@@ -75,7 +77,54 @@
         </div>
       </div>
 
-    <%- include("./partials/footer") %>
+      <%- include("./partials/footer") %>
+        <script>
+
+          var botonesIncrementar = document.querySelectorAll('.quantity-increment');
+          var botonesDecrementar = document.querySelectorAll('.quantity-decrement');
+          var contadoresElemento = document.querySelectorAll('.quantity-input');
+          var preciosElemento = document.querySelectorAll('.cart-item-total');
+          var totalElemento = document.querySelector('.cart-total h3');
+       
+
+
+
+          function actualizarPrecio() {
+            var total = 0;
+            preciosElemento.forEach((precioElemento, i) => {
+              var precio = parseFloat(precioElemento.textContent.replace('$', ''));
+              var cantidad = parseInt(contadoresElemento[i].value);
+              total += precio * cantidad;
+            });
+            totalElemento.textContent = 'Total: $' + total.toFixed(2);
+          }
+          
+
+          botonesIncrementar.forEach((botonIncrementar, i) => {
+
+            botonIncrementar.addEventListener('click', function () {
+
+              contadoresElemento[i].value = Number(contadoresElemento[i].value) + 1;
+     
+              actualizarPrecio();
+
+            })
+          });
+
+          botonesDecrementar.forEach((botonDecrementar, i) => {
+
+            botonDecrementar.addEventListener('click', function () {
+              if (contadoresElemento[i].value > 1) {
+                contadoresElemento[i].value = Number(contadoresElemento[i].value) - 1;
+              }
+              actualizarPrecio();
+
+            })
+          });
+          
+        </script>
+
+
 
 
 </body>
